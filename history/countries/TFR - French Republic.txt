@@ -1,0 +1,70 @@
+﻿capital = 16
+
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.15
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	early_fighter = 1
+	naval_bomber1 = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	CAS1 = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+set_convoys = 200
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 74
+	monarchism = 14
+	communism = 22
+}
+
+add_ideas = {
+}
+
+
+create_country_leader = {
+	name = "Édouard Daladier"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = "Portrait_France_Edouard_Daladier.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		stout_defender
+	}
+}
+
+create_country_leader = {
+	name = "Napoleon VI"
+	desc = "NAPOLEON_VI_DESC"
+	picture = "Napoleon_VI.dds"
+	expire = "1965.1.1"
+	ideology = napoleonism
+	traits = {
+	}
+}

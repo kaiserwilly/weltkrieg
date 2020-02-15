@@ -1,0 +1,18 @@
+#######################
+#####GERMAN EMPIRE#####
+#######################
+
+focus_tree = {
+	id = english_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	
+	default = no
+}	

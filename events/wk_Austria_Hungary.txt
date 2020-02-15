@@ -1,0 +1,314 @@
+﻿############# Weltkrieg Events ##############
+
+#############################################
+################AUSTRIA HUNGARY##############
+#############################################
+
+add_namespace = wk_auh
+
+#################################################################
+
+#################################################################
+
+#UPRISINGS IN BOSNIA
+country_event = {
+	id = wk_auh.10
+	title = wk_auh.10.t 
+	desc = wk_auh.10.d
+	
+	hidden = yes
+	
+	fire_only_once = yes
+
+    trigger = {
+    date > 1936.02.01
+    date < 1936.02.03
+    }
+	
+	mean_time_to_happen = {
+	    days = 1
+	}
+	
+	immediate = { 
+		if = { 
+		    limit = {
+			    AUH = { separatism > 0.2 }
+				AUH = { separatism < 0.3 }
+			}	     
+		    BOS = { transfer_state = 801 }
+			BOS = { load_oob = BOS_1936 }
+            BOS = { declare_war_on = { type = annex_everything    target = AUH } }			
+	    }
+		if = { 
+		    limit = {
+			    AUH = { separatism > 0.3 }
+			}	     
+		    BOS = { transfer_state = 800 }
+            BOS = { transfer_state = 801 }
+            BOS = { load_oob = BOS_1936_1 }	
+            BOS = { declare_war_on = { type = annex_everything    target = AUH } }			
+	    }
+	}
+}
+
+#UPRISINGS IN GALICIA
+country_event = {
+	id = wk_auh.11
+	title = wk_auh.11.t 
+	desc = wk_auh.11.d
+	
+	hidden = yes
+	
+	fire_only_once = yes
+
+    trigger = {
+    date > 1936.05.01
+    date < 1936.05.03
+    }
+	
+	mean_time_to_happen = {
+	    days = 1
+	}
+	
+	immediate = { 
+		if = { 
+		    limit = {
+			    AUH = { separatism > 0.2 }
+				AUH = { separatism < 0.35 }
+			}	     
+		    GAL = { transfer_state = 89 }
+			GAL = { load_oob = GAL_1936 }
+            GAL = { declare_war_on = { type = annex_everything    target = AUH } }			
+	    }
+		if = { 
+		    limit = {
+			    AUH = { separatism > 0.35 }
+			}	     
+		    GAL = { transfer_state = 89 }
+            GAL = { transfer_state = 91 }
+            GAL = { load_oob = GAL_1936_1 }	
+            GAL = { declare_war_on = { type = annex_everything    target = AUH } }			
+	    }
+	}
+}
+
+#ANNEX SERBIA
+country_event = {
+	id = wk_auh.1
+	title = wk_auh.1.t 
+	desc = wk_auh.1.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = wk_auh.1.a
+		ai_chance = { factor = 70 }
+		AUH = {
+			country_event = { hours = 6 id = wk_auh.2 }
+		}
+	}
+	option = { # Refuse
+		name = wk_auh.1.b
+		ai_chance = { factor = 30 }
+		AUH = {
+			country_event = { hours = 6 id = wk_auh.3 }
+		}
+	}
+}
+
+#SERBIA ACCEPTS
+country_event = {
+	id = wk_auh.2
+	title = wk_auh.2.t
+	desc = wk_auh.2.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wk_auh.2.a
+		annex_country = { target = YUG transfer_troops = yes }
+		add_named_threat = { threat = 2 name = auh_threat }
+	}
+}
+
+#SERBIA REFUSES
+country_event = {
+	id = wk_auh.3
+	title = wk_auh.3.t
+	desc = wk_auh.3.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wk_auh.3.a
+		create_wargoal = {
+			type = annex_everything
+			target = YUG 
+		}
+	}
+}
+#################################################################
+
+#BUDAPEST AGREEMENT
+country_event = {
+	id = wk_auh.4
+	title = wk_auh.4.t
+	desc = wk_auh.4.d
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		news_event = { days = 3 id = wk_news.1 }
+	}
+		
+	option = { # Accept
+		name = wk_auh.4.a
+		ai_chance = { factor = 100 }
+		ROM = {
+		    transfer_state = 78
+			kill_country_leader = yes
+		}
+		AUH = {
+			transfer_state = 797
+			country_event = { hours = 6 id = wk_auh.5 }			
+		}
+	}
+	option = { # Refuse
+		name = wk_auh.4.b
+		ai_chance = { factor = 0 }
+		AUH = {
+			country_event = { hours = 6 id = wk_auh.6 }
+		}
+	}
+}
+
+#ROMANIA ACCEPTS
+country_event = {
+	id = wk_auh.5
+	title = wk_auh.5.t
+	desc = wk_auh.5.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wk_auh.5.a
+		add_named_threat = { threat = 1 name = austrian_expansionism }
+	}
+}
+
+#ROMANIA REFUSES
+country_event = {
+	id = wk_auh.6
+	title = wk_auh.6.t
+	desc = wk_auh.6.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wk_auh.6.a
+		if = {
+			limit = {
+				ROM = { is_in_faction_with = AUH }
+			}
+			remove_from_faction = ROM
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ROM
+		}
+	}
+}
+
+####################################################
+
+#HABSBURGER COUP
+country_event = {
+	id = wk_auh.7
+	title = wk_auh.7.t
+	desc = wk_auh.7.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accepts
+		name = wk_auh.7.a
+	    ai_chance = { factor = 100 }
+		AUH = {
+			country_event = { hours = 6 id = wk_auh.8 }
+		}
+	}
+	option = { # Refuses
+		name = wk_auh.7.b
+	    ai_chance = { factor = 0 }
+	}
+}
+
+#ROMANIA ACCEPTS, BUT...
+country_event = {
+	id = wk_auh.8
+	title = wk_auh.8.t
+	desc = wk_auh.8.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wk_auh.8.a
+		AUH = {
+			country_event = { days = 7 id = wk_auh.9 }
+		}
+	}
+} 
+
+#CIVIL WAR IN ROMANIA
+country_event = {
+	id = wk_auh.9
+	title = wk_auh.9.t
+	desc = wk_auh.9.d
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    ROM = { transfer_state = 78 }
+		ROM = { transfer_state = 79 }
+		ROM = { transfer_state = 81 }
+		BUL = { add_to_faction = ROR }
+		AUH = { add_to_faction = ROM }
+	}
+	
+	option = {
+		name = wk_auh.9.a
+		AUH = {
+			country_event = { days = 2 id = wk_auh.10 }
+		}
+		ROR = { declare_war_on = { type = annex_everything    target = ROM } }
+		ROR = { load_oob = ROR_1937}
+		ROM = { declare_war_on = { type = annex_everything    target = ROR } }
+		ROM = { load_oob = ROM_1937}
+	}
+}
+
+#3rd BALKAN WAR
+country_event = {
+	id = wk_auh.10
+	title = wk_auh.10.t
+	desc = wk_auh.10.d
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    ROM = { transfer_state = 78 }
+		ROM = { transfer_state = 79 }
+		ROM = { transfer_state = 81 }
+		BUL = { add_to_faction = ROR }
+		AUH = { add_to_faction = ROM }
+	}
+	
+	option = {
+		name = wk_auh.10.a
+		AUH = { declare_war_on = { type = annex_everything    target = ROR } }
+		AUH = { declare_war_on = { type = annex_everything    target = BUL } }
+		ROM = { declare_war_on = { type = annex_everything    target = BUL } }
+		BUL = { declare_war_on = { type = annex_everything    target = ROM } }
+		BUL = { declare_war_on = { type = annex_everything    target = AUH } }
+		ROR = { declare_war_on = { type = annex_everything    target = AUH } }
+	}
+}

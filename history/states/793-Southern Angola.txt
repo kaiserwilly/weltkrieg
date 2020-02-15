@@ -1,0 +1,17 @@
+state={
+	id=793
+	name="STATE_793"
+	
+	state_category = rural
+
+	history={
+		owner = POR
+        add_core_of = ANG
+    }
+	
+	provinces={
+		8202 12985 
+	}
+	manpower=150000
+	buildings_max_level_factor=1.000
+}

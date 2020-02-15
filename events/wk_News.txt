@@ -1,0 +1,21 @@
+###########################
+# News Events
+###########################
+
+add_namespace = wk_news
+
+#King Carol dead
+news_event = {
+	id = wk_news.1
+	title = wk_news.1.t
+	desc = wk_news.1.d
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1.a
+		trigger = { TAG = AUH }
+    }
+}

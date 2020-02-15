@@ -1,0 +1,624 @@
+#######################
+####AUSTRIA HUNGARY####
+#######################
+
+focus_tree = {
+	id = austrian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AUH
+		}
+	}
+	
+	default = no
+
+continuous_focus_position = { x = 40 y = 1200 }
+	
+###################
+#MONARCHIST BRANCH#
+###################
+
+#KEEP THE OLD GOVERNMENT
+	focus = {
+		id = AUH_keep_government
+		icon = GFX_keep_government
+		x = 4
+		y = 0
+		cost = 1 
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		mutually_exclusive = {
+		focus = AUH_reforms
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		    add_popularity = {
+	            ideology = monarchism
+	            popularity = 0.15
+            }
+		}
+	}
+
+#AUSTRO-HUNGARIAN EXPANSIONISM
+	focus = {
+		id = AUH_austro_expansionism
+		icon = GFX_expand_empire
+		x = 1
+		y = 1
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_keep_government
+        }		
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+			remove_ideas = AUH_victors_of_ww1
+			army_experience = 50
+			add_war_support = 0.15
+		}
+	}
+	
+#ANNEX SERBIA
+	focus = {
+		id = AUH_annex_serbia
+		icon = GFX_serbian_crisis
+		x = -1
+		y = 2
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_austro_expansionism
+        }		
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			YUG = { exists = yes }
+		}
+		
+		completion_reward = {
+			YUG = {
+				country_event = { id = wk_auh.1 hours = 12 }
+			}
+			add_popularity = {
+	            ideology = separatism
+	            popularity = 0.15
+            }
+            BUL = { add_opinion_modifier = { target = AUH modifier = medium_decrease } }			
+		}
+	}
+	
+#BEFRIEND OTTOMAN EMPIRE
+	focus = {
+		id = AUH_befriend_ottoman
+		icon = GFX_befriend_ottomans
+		x = 1
+		y = 2
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_austro_expansionism
+        }		
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OTM = { exists = yes }
+		}
+		
+		completion_reward = {
+			create_faction = "anti_balkan_league"
+			add_to_faction = OTM
+			BUL = { add_opinion_modifier = { target = AUH modifier = medium_decrease } }	
+		}
+	}
+	
+#BUDAPEST AGREEMENT
+	focus = {
+		id = AUH_budapest_agreement
+		icon = GFX_budapest_agreement
+		x = 3
+		y = 2
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_austro_expansionism
+        }		
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			ROM = { exists = yes }
+		}
+		
+		completion_reward = {
+			ROM = {
+				country_event = { id = wk_auh.4 hours = 12 }
+			}
+			add_popularity = {
+	            ideology = separatism
+	            popularity = 0.05
+            }
+            BUL = { add_opinion_modifier = { target = AUH modifier = medium_decrease } }			
+		}
+	}
+
+#HABSBURGER COUP
+	focus = {
+		id = AUH_habsburger_coup
+		icon = GFX_strengthen_house
+		x = 1
+		y = 3
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_annex_serbia
+        }
+        prerequisite = {
+        focus = AUH_befriend_ottoman
+        }
+        prerequisite = {
+        focus = AUH_budapest_agreement
+        }		
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {         
+		}
+		
+		completion_reward = {
+			ROM = {
+				country_event = { id = wk_auh.7 hours = 12 }
+			}	
+		}
+	}
+	
+#ERRADICATE THE SEPARATISM
+	focus = {
+		id = AUH_erradicate_separatism
+		icon = GFX_goal_generic_political_pressure
+		x = 7
+		y = 1
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_keep_government
+        }		
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {
+            add_popularity = {
+	            ideology = separatism
+	            popularity = -0.1
+            }		
+		}
+	}
+
+#RELOCATE FACTORIES AUSTRIA
+	focus = {
+		id = AUH_relocate_austria
+		icon = GFX_relocate_austria
+		x = 6
+		y = 2
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_erradicate_separatism
+        }
+
+        mutually_exclusive = {
+        focus = AUH_relocate_hungary
+        }		
+		
+		ai_will_do = {
+			factor = 50		
+		}
+		
+		completion_reward = {
+			107 = {
+			    remove_building = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+            801 = {
+			    remove_building = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+			88 = {
+			    remove_building = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+            82 = {
+			    remove_building = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+            153 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+	                type = industrial_complex
+	                level = 3
+	                instant_build = yes
+                }
+            }
+            152 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+	                type = industrial_complex
+	                level = 2
+	                instant_build = yes
+                }
+            } 
+			4 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+	                type = industrial_complex
+	                level = 2
+	                instant_build = yes
+                }
+            }      			
+		}
+	}
+
+#RELOCATE FACTORIES HUNGARY
+	focus = {
+		id = AUH_relocate_hungary
+		icon = GFX_relocate_hungary
+		x = 8
+		y = 2
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_erradicate_separatism
+        }
+
+        mutually_exclusive = {
+        focus = AUH_relocate_austria
+        }		
+		
+		ai_will_do = {
+			factor = 50		
+		}
+		
+		completion_reward = {
+			107 = {
+			    remove_building = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+            801 = {
+			    remove_building = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+			88 = {
+			    remove_building = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+            82 = {
+			    remove_building = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+            155 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+	                type = industrial_complex
+	                level = 3
+	                instant_build = yes
+                }
+            }
+            154 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+	                type = industrial_complex
+	                level = 2
+	                instant_build = yes
+                }
+            } 
+			43 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+	                type = industrial_complex
+	                level = 2
+	                instant_build = yes
+                }
+            }			
+		}
+	}
+
+#ANTI-SEPARATISM DIVISIONS
+	focus = {
+		id = AUH_antiseparatism_divisions
+		icon = GFX_anti_separatism_corps
+		x = 7
+		y = 3
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_relocate_austria
+		focus = AUH_relocate_hungary
+        }		
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {
+            load_oob = "Anti-Separatism"
+            add_popularity = {
+	            ideology = separatism
+	            popularity = -0.05
+            }			
+		}
+	}
+
+
+#PREPARE FOR THE WORST
+	focus = {
+		id = AUH_prepare_worst
+		icon = GFX_prepare_worst
+		x = 4
+		y = 4
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_antiseparatism_divisions
+        }
+		
+		prerequisite = {
+        focus = AUH_habsburger_coup
+        }
+			
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {
+			4 = {
+			    add_building_construction = {
+			 	    type = bunker
+				    level = 5
+				    province = 11630
+				    instant_build = yes 
+			    }
+			    add_building_construction = {
+				    type = bunker
+				    level = 5
+				    province = 9661
+				    instant_build = yes 
+			    }
+			    add_building_construction = {
+				    type = bunker
+				    level = 5
+				    province = 3700
+				    instant_build = yes 
+			    }
+			    add_building_construction = {
+				    type = bunker
+				    level = 5
+				    province = 6739
+				    instant_build = yes 
+			    }
+			    add_building_construction = {
+				    type = bunker
+				    level = 5
+				    province = 3718
+				    instant_build = yes 
+			    }
+				add_building_construction = {
+				    type = bunker
+				    level = 5
+				    province = 9646
+				    instant_build = yes 
+			    }
+				add_building_construction = {
+				    type = bunker
+				    level = 5
+				    province = 9527
+				    instant_build = yes 
+			    }				
+		    }
+		}
+	}
+
+#A NEW EMPEROR
+	focus = {
+		id = AUH_new_emperor
+		x = 4
+		y = 5
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_prepare_worst
+        }
+			
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {
+			create_country_leader = {
+	            name = "Kaiser Otto I"
+	            desc = "POLITICS_KONRAD_ADENAUER_DESC"
+	            picture = "Kaiser_Otto.dds"
+	            expire = "1965.1.1"
+	            ideology = constitutional_monarchy
+	            traits = {
+	            }
+            }	
+		}
+	}
+
+#Re-establish Austria-Hungary
+	focus = {
+		id = AUH_reestablish_austria_hungary
+		x = 4
+		y = 6
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_new_emperor
+        }
+		
+		mutually_exclusive = {
+		focus = AUH_trialism
+		}
+		mutually_exclusive = {
+		focus = AUH_austria_first
+		}
+			
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {	    
+		}
+	}
+
+#Trialism
+	focus = {
+		id = AUH_trialism
+		x = 6
+		y = 6
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_new_emperor
+        }
+		
+		mutually_exclusive = {
+		focus = AUH_austria_first
+		}
+		mutually_exclusive = {
+		focus = AUH_reestablish_austria_hungary
+		}
+			
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {
+				
+		}
+	}
+
+#AUSTRIA FIRST
+	focus = {
+		id = AUH_austria_first
+		x = 2
+		y = 6
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_new_emperor
+        }
+		
+		mutually_exclusive = {
+		focus = AUH_trialism
+		}
+		mutually_exclusive = {
+		focus = AUH_reestablish_austria_hungary
+		}
+			
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {
+				
+		}
+	}
+	
+#Retake Galicia
+	focus = {
+		id = AUH_retake_galicia
+		x = 4
+		y = 7
+		cost = 1 
+		
+		prerequisite = {
+        focus = AUH_austria_first
+		focus = AUH_reestablish_austria_hungary
+		focus = AUH_trialism
+        }
+			
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {
+				
+		}
+	}
+	
+###################
+#DEMOCRATIC BRANCH#
+###################
+
+#Retake Galicia
+	focus = {
+		id = AUH_reforms
+		x = 15
+		y = 0
+		cost = 1 
+		
+		mutually_exclusive = {
+		focus = AUH_keep_government
+		}
+			
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		completion_reward = {
+				
+		}
+	}
+	
+}

@@ -1,0 +1,270 @@
+#######################
+#####GERMAN EMPIRE#####
+#######################
+
+focus_tree = {
+	id = german_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	
+	default = no
+
+#OUR PLACE IN THE SUN	
+	focus = {
+		id = GER_place_in_sun
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 0
+		y = 0
+		cost = 1 
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+			add_timed_idea = { idea = place_in_sun  days = 365 }
+		}
+	}
+	
+#GERMAN IMPERIALISM	
+	focus = {
+		id = GER_german_imperialism
+		icon = GFX_focus_ger_return_of_the_kaiser
+		x = -13
+		y = 1
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_place_in_sun
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#OPERATION BALTIKUM
+	focus = {
+		id = GER_operation_baltikum
+		x = -18
+		y = 2
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_german_imperialism
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#SCHWARZ PLAN
+	focus = {
+		id = GER_schwarz_plan
+		x = -13
+		y = 2
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_german_imperialism
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#OPERATION GOLF
+	focus = {
+		id = GER_operation_golf
+		x = -8
+		y = 2
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_german_imperialism
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#PAX GERMANICA
+	focus = {
+		id = GER_pax_germanica
+		icon = GFX_pax_germanica
+		x = 10
+		y = 1
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_place_in_sun
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#AGE OF REVOLUTIONS
+	focus = {
+		id = GER_age_revolution
+		x = 0
+		y = 2
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_pax_germanica
+		focus = GER_german_imperialism
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#AUSTRIA'S COLLAPSE
+	focus = {
+		id = GER_austria_collapse
+		x = 0
+		y = 3
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_age_revolution
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#RUSSIAN CIVIL WAR
+	focus = {
+		id = GER_russia_civil_war
+		x = 0
+		y = 3
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_age_revolution
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#RUSSIAN CIVIL WAR
+	focus = {
+		id = GER_russia_civil_war
+		x = 0
+		y = 3
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_age_revolution
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+	
+}	

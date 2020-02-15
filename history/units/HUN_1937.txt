@@ -1,0 +1,428 @@
+division_template = {
+	name = "Gyalogdandár"				# Infantry Brigade
+
+	division_names_group = HUN_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Huszár Dandár" 					# Cavalry Brigade
+	# Note: has 2x bicycle inf bns added during 1938-40 mobilization
+
+	division_names_group = HUN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }   # recon bn of tankettes, ACs, mot inf
+	}
+}
+
+units = {
+###AUSTRIA FRONT###
+	division= {	
+		name = "Gyalogdandár"
+		location = 3670
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3670
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11627
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11627
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 686
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 686
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 6720
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 6720
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9692
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9692
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9539
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9539
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 3670
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 11627
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 686
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 6720
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 9539
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+###ROMANIA###	
+	division= {	
+		name = "Gyalogdandár"
+		location = 3649
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11592
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9619
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3665
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 6679
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 6709
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3676
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 690
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3689
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 711
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9685
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 727
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 6679
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 9685
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 3649
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 3676
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+###CROATIA###
+	division= {	
+		name = "Gyalogdandár"
+		location = 9624
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9624
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11610
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11610
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9643
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9643
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 619
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9608
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3617
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3614
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 9624
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandárr"
+		location = 11610
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Huszár Dandár"
+		location = 9643
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.3
+	}
+###GALICIA###
+	division= {	
+		name = "Gyalogdandár"
+		location = 3484
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3484
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11539
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11539
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11554
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11554
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11554
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3550
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 3581
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 6604
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 11536
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9563
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 6571
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 6571
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9704
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 9704
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 727
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 727
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gyalogdandár"
+		location = 727
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.3
+	}
+}
+	

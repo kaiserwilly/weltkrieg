@@ -1,0 +1,57 @@
+scripted_gui = {
+	open_usga_window = {
+		context_type = player_context
+		
+		window_name = "open_usga_window"
+		parent_window_token = top_bar
+		
+		visible = {
+			is_ai = no
+		}
+		
+		effects = {
+			open_usga_window_button_click = {
+				set_temp_variable = { show = 1 }
+				subtract_from_temp_variable = { show = show_usga }
+				set_variable = { show_usga = show }
+			}
+		}
+	}
+	
+	usga_window = {
+		context_type = player_context
+		
+		window_name = "usga_window"
+		
+		visible = {
+		    check_variable = { show_usga > 0 }
+		}
+	}
+	
+	USGA_scripted_gui_main = {
+        context_type = player_context
+
+        parent_window_name = "usga_window"
+        window_name = "usga_list_window"
+
+        visible = {
+            always = yes
+        }
+
+        effects = {          
+        }
+
+        triggers = {
+        }
+
+        dynamic_lists = {
+            usga_country_list = {
+                array = USGA_array
+                entry_container = usga_country_entry
+            }
+        }
+		properties = {
+            USGA_nation_flag = { image = "[?USGA_array^i.GetFlag]" }
+        }
+    }
+}

@@ -1,0 +1,226 @@
+﻿############# Weltkrieg Events ##############
+
+#############################################
+################GERMAN EMPIRE################
+#############################################
+
+add_namespace = wk_ger
+
+#################################################################
+
+#CONGRESS OF WARSAW
+country_event = {
+	id = wk_ger.1
+	title = wk_ger.1.t
+	desc = wk_ger.1.d
+	picture = GFX_1warsaw_congress
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wk_ger.1.a
+        GER = { puppet = POL }
+		POL = { add_state_core = 10 }
+		every_state = { 
+            limit = { is_owned_by = EPS  is_claimed_by = POL }
+            POL = { transfer_state = PREV }
+			POL = { add_state_core = PREV }
+			EPS = { remove_state_core = PREV }
+        }
+		every_state = { 
+            limit = { is_owned_by = EPS  is_claimed_by = UKN }
+            UKN = { transfer_state = PREV }
+			UKN = { add_state_core = PREV }
+			EPS = { remove_state_core = PREV }
+        }
+		every_state = { 
+            limit = { is_owned_by = EPS  is_claimed_by = UBD }
+            UBD = { transfer_state = PREV }
+			UBD = { add_state_core = PREV }
+			EPS = { remove_state_core = PREV }
+        }
+    }
+}
+
+#BERLIN CONFERENCE
+country_event = {
+	id = wk_ger.2
+	title = wk_ger.2.t
+	desc = wk_ger.2.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wk_ger.2.a
+		every_state = { 
+            limit = { is_owned_by = FRA  is_claimed_by = GER }
+            GER = { transfer_state = PREV }
+        }
+		every_state = { 
+            limit = { is_owned_by = ENG  is_claimed_by = GER }
+            GER = { transfer_state = PREV }
+        }
+		every_state = { 
+            limit = { is_owned_by = BEL  is_claimed_by = GER }
+            GER = { transfer_state = PREV }
+        }
+		every_state = { 
+            limit = { is_owned_by = POR  is_claimed_by = GER }
+            GER = { transfer_state = PREV }
+        }
+    }
+}
+
+#FORMER TERRITORIES
+country_event = {
+	id = wk_ger.3
+	title = wk_ger.3.t
+	desc = wk_ger.3.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wk_ger.3.a
+		GER = { end_puppet = POL }
+		GER = { transfer_state = 10 }
+		GER = { transfer_state = 87 }
+		GER = { transfer_state = 98 }
+		GER = { add_state_core = 10 }
+		GER = { add_state_core = 87 }
+		GER = { add_state_core = 98 }
+		POL = { remove_state_core = 10 }
+		POL = { remove_state_core = 87 }
+		POL = { remove_state_core = 98 }
+    }
+}
+
+#COLONIAL GOVERNMENT
+country_event = {
+	id = wk_ger.4
+	title = wk_ger.4.t
+	desc = wk_ger.4.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wk_ger.4.a
+		every_state = { 
+            limit = { is_owned_by = GER  is_claimed_by = GCG }
+            GCG = { transfer_state = PREV }	
+        }
+		every_state = { 
+            limit = { is_owned_by = GER  is_claimed_by = GCG }
+            GCG = { add_state_core = PREV }	
+        }
+    }
+}
+
+#SWISS PARTITION
+country_event = {
+	id = wk_ger.5
+	title = wk_ger.5.t
+	desc = wk_ger.5.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wk_ger.5.a
+		GER = { transfer_state = 795 }
+		GER = { add_state_core = 795 }
+		FRA = { transfer_state = 3 }
+		FRA = { add_state_core = 3 }
+		ITA = { transfer_state = 151 }
+		ITA = { add_state_core = 151 }
+		
+    }
+}
+
+#ASK AUSTRIA ABOUT ANSCHLUSS
+country_event = {
+	id = wk_ger.6
+	title = wk_ger.6.t
+	desc = wk_ger.6.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = wk_ger.6.a
+		ai_chance = {
+			base = 100
+		}
+		GER = {
+			country_event = { hours = 2 id = wk_ger.7 }
+		}
+	}
+	option = { # Refuse
+		name = wk_ger.6.b
+		ai_chance = {
+			base = 0			
+		}
+		GER = {
+			country_event = { hours = 2 id = wk_ger.8 }
+		}
+	}
+}
+
+#ANSCHLUSS IS DONE
+country_event = {
+	id = wk_ger.7
+	title = wk_ger.7.t
+	desc = wk_ger.7.d
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    hidden_effect = {
+		    CZE = { transfer_state = 9 }
+			CZE = { transfer_state = 75 }
+		}
+	}		
+		    
+	option = {
+		name = germany.4.a
+		4 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		152 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		153 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		74 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		69 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		
+		AUS = {
+			every_unit_leader = {
+				set_nationality = GER
+			}
+		}
+		annex_country = { target = AUS transfer_troops = yes }
+		add_political_power = 75
+		set_country_flag = AUS_annexed
+		add_war_support = 0.1
+		add_stability = 0.05
+	}
+}
+

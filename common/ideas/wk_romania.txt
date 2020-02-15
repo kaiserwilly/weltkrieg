@@ -1,0 +1,135 @@
+ideas = {
+    country = {
+        brothers_from_a_diferent_mother = {
+			allowed = {
+				always = no
+                                original_tag= ROM
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                army_core_attack_factor = 0.2
+                army_core_defence_factor = 0.2
+			}
+
+		}
+		
+		capitalism = {
+			allowed = {
+				always = no
+                original_tag= ROM
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                production_speed_buildings_factor = 0.3       
+			}
+
+		}
+		
+		raised_minnimum_wage = {
+			allowed = {
+				always = no
+                original_tag= ROM
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                industrial_capacity_factory = 0.3    
+                consumer_goods_factor = 0.02				   
+			}
+
+		}
+		
+        outdated_political_system = {
+			allowed = {
+				always = no
+                original_tag= ROM
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                industrial_capacity_factory = -0.4
+				stability_factor = -0.5
+				consumer_goods_factor = 0.03
+			}
+
+		}
+        
+		army_corruption = {
+            allowed = {
+				always = no
+                original_tag= ROM
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                   army_attack_factor = -0.3
+                   army_speed_factor = -0.3
+                   army_defence_factor = -0.3
+			}
+
+		}
+
+        anti_monarchist_propaganda = {
+			allowed = {
+				always = no
+                original_tag= ROM
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                   monarchism_drift = -0.5
+			}
+
+		}
+
+        retaking_our_rightful_land = {
+			allowed = {
+				always = no
+                original_tag= ROM
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                justify_war_goal_time = -0.5
+			}
+
+		}	
+    }
+}

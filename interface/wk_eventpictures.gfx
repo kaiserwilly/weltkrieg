@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_1warsaw_congress"
+		texturefile = "gfx/event_pictures/1warsaw_congress.dds"
+	}
+	spriteType = {
+		name = "GFX_austrian_civilwar"
+		texturefile = "gfx/event_pictures/austrian_civilwar.dds"
+	}
+
+}

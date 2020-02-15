@@ -1,0 +1,16 @@
+on_actions = {
+
+    #Austria-Hungary country list
+    on_startup = {
+
+        effect = {
+            AUH = {
+                add_to_array = { USGA_array = AUH }
+                add_to_array = { USGA_array = HUN }
+                add_to_array = { USGA_array = CZE }
+                add_to_array = { USGA_array = CRO }
+                add_to_array = { USGA_array = GAL }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+﻿capital = 46
+
+oob = "ROM_1936"
+
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.6
+
+# Starting tech
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	basic_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+}
+
+add_ideas = { 
+    outdated_political_system
+    army_corruption            
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = monarchism
+	last_election = "1933.12.20"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	monarchism = 69
+	fascism = 16
+	democratic = 15
+}
+
+
+create_country_leader = {
+	name = "King Carol II"
+	desc = "KING_CAROL_II_DESC"
+	picture = "King_Carol_II.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_monarchy
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Armand Calinescu"
+	desc = "ARMAND_CALINESCU_DESC"
+	picture = "Armand_Calinescu.dds"
+	expire = "1965.1.1"
+	ideology = democratic
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Corneliu Zelea Codreanu"
+	desc = "CORNELIU_ZELEA_CODREANU_DESC"
+	picture = "Codreanu.dds"
+	expire = "1965.1.1"
+	ideology = fascism
+	traits = {
+		#
+	}
+}

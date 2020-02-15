@@ -1,0 +1,69 @@
+ideas = {
+
+	country = {
+		place_in_sun = {
+			
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				political_power_gain = 0.5
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		hohenzollern = {
+			
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = 0.1	
+			}
+		}
+		
+		GER_victors_of_ww1 = {
+
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = -0.75
+			}
+
+			modifier = {
+				conscription = -0.003
+				war_support_factor = -0.05
+			}
+		}
+    }
+}

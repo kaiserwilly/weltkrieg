@@ -1,0 +1,387 @@
+﻿division_template = {
+	name = "Infanterie-Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Kaiser-Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		artillery = { x = 2 y = 1 }
+		artillery = { x = 2 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+		anti_tank = { x = 0 y = 2 }
+		anti_air = { x = 0 y = 3 }
+		field_hospital = { x = 0 y = 4 }
+	}
+}
+division_template = {
+	name = "Panzer-Division"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Motorisierte Division" 			# Motorisierte division
+	# Note: actually a grouping of 3 independent Motorisierte-mot regiments
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+	    motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Gebirgsjäger-Brigade"		# Gebirgsbrigade
+	#Note: precursor to Gebirgs-Divisions
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Kavallerie-Division"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	    artillery = { x = 0 y = 1 }
+	}
+}
+
+units = {
+    ###HUNGARY FRONT###
+	division= {	
+		name = "Infanterie-Division"
+		location = 6672
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 6672
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 6672
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 11630
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 11630
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 11630
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 9661
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Divisionn"
+		location = 9661
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 3700
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 3700
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 6739
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 6739
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 6739
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 3718
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 3718
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 9661
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 9661
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 9661
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Panzer-Division"
+		location = 6739
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Panzer-Division"
+		location = 6739
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Panzer-Division"
+		location = 11630
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Panzer-Division"
+		location = 11630
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	###BOHEMIA FRONT###
+	division= {	
+		name = "Infanterie-Division"
+		location = 557
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 557
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 557
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 557
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 11525
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 543
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 5283
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 7857
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 7857
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 9555
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 9555
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 9555
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 11414
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 11401
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 3585
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division"
+		location = 3585
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 3583
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 3583
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 3583
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kaiser-Division"
+		location = 421
+		division_template = "Kaiser-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Panzer-Division"
+		location = 424
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Panzer-Division"
+		location = 424
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Panzer-Division"
+		location = 11525
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+	}
+}
+	
+	
+	

@@ -1,0 +1,47 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_idea_place_in_sun"
+		texturefile = "gfx/interface/ideas/place_in_sun.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_multinational_state"
+		texturefile = "gfx/interface/ideas/multinational_state.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_hohenzollern"
+		texturefile = "gfx/interface/ideas/hohenzollern.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_habsburg"
+		texturefile = "gfx/interface/ideas/habsburg.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_brothers_from_a_diferent_mother"
+		texturefile = "gfx/interface/ideas/national_mobilization_focus.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_capitalism"
+		texturefile = "gfx/interface/ideas/foreign_capital.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_raised_minnimum_wage"
+		texturefile = "gfx/interface/ideas/flexible_foreign_policy.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_outdated_political_system"
+		texturefile = "gfx/interface/ideas/generic_victors_of_ww1.dds"
+	}	
+     spriteType = {
+		name = "GFX_idea_army_corruption"
+		texturefile = "gfx/interface/ideas/incompetent_officers.dds"
+	}		
+      spriteType = {
+		name = "GFX_idea_anti_monarchist_propaganda"
+		texturefile = "gfx/interface/ideas/idea_sour_loser.dds"
+	}	
+       spriteType = {
+		name = "GFX_idea_retaking_our_rightful_land"
+		texturefile = "gfx/interface/ideas/balkan_dominance.dds"
+	}	
+}

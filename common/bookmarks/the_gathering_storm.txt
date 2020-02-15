@@ -1,0 +1,72 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1933.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+		
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = monarchism
+			ideas = {
+			    GER_victors_of_ww1
+				hohenzollern
+			}
+			focuses = {
+				GER_berlin_conference
+				GER_warsaw_congress
+				GER_former_territories
+			}
+		}
+		"ETH"={
+		}
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				trotskyite_plot
+				home_of_revolution
+			}
+			focuses = {
+				SOV_great_purge
+				SOV_claims_on_baltic
+				SOV_war_with_uk
+			}	
+		}
+		"UGA"={
+		}
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+				FRA_protected_by_the_maginot_line
+			}
+		}
+		
+		##MINORS
+		"AUH"={
+			minor = yes
+			ideology = monarchism
+			ideas = {
+			multinational_state
+            AUH_victors_of_ww1
+			habsburg
+			}
+			focuses = {
+				AUH_keep_government
+			}
+		}
+		"ENG"={
+			minor = yes
+			ideology = monarchism
+		}
+		"ROM"={
+			minor = yes
+			ideology = monarchism
+		}
+		
+}

@@ -1,0 +1,36 @@
+#######################
+#####GERMAN EMPIRE#####
+#######################
+
+focus_tree = {
+	id = italian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+	
+	default = no
+	
+	#RANDOM
+	focus = {
+		id = ITA_random
+		x = 0
+		y = 0
+		cost = 1 
+		
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+}	

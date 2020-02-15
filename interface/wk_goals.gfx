@@ -1,0 +1,133 @@
+spriteTypes = {	
+
+##########WELTKRIEG##########
+ 	
+	SpriteType = { 
+		name = "GFX_berlin_conference"
+		texturefile = "gfx/interface/goals/berlin_conference.dds"
+	} 
+	SpriteType = { 
+		name = "GFX_warsaw_congress"
+		texturefile = "gfx/interface/goals/warsaw_congress.dds"
+	}
+    SpriteType = { 
+		name = "monarchism"
+		texturefile = "gfx/interface/goals/ideologies/monarchism.dds"
+	}
+	SpriteType = { 
+		name = "GFX_former_territories"
+		texturefile = "gfx/interface/goals/former_territories.dds"
+	}
+	SpriteType = { 
+		name = "GFX_austrian_situation"
+		texturefile = "gfx/interface/goals/austrian_situation.dds"
+	}
+	SpriteType = { 
+		name = "GFX_habsburgs"
+		texturefile = "gfx/interface/goals/habsburgs.dds"
+	}
+	SpriteType = { 
+		name = "GFX_hungarians"
+		texturefile = "gfx/interface/goals/hungarians.dds"
+	}
+	SpriteType = { 
+		name = "GFX_holy_roman"
+		texturefile = "gfx/interface/goals/holy_roman.dds"
+	}
+	SpriteType = { 
+		name = "GFX_romanovs"
+		texturefile = "gfx/interface/goals/romanovs.dds"
+	}
+	SpriteType = { 
+		name = "GFX_bolsheviks"
+		texturefile = "gfx/interface/goals/bolsheviks.dds"
+	}
+	SpriteType = { 
+		name = "GFX_swiss_partition"
+		texturefile = "gfx/interface/goals/swiss_partition.dds"
+	}
+	SpriteType = { 
+		name = "GFX_colonial_government"
+		texturefile = "gfx/interface/goals/colonial_government.dds"
+	}
+	SpriteType = { 
+		name = "GFX_morocco_is_spain"
+		texturefile = "gfx/interface/goals/moroccospain.dds"
+	}
+	SpriteType = { 
+		name = "GFX_restauration_of_austria_hungary"
+		texturefile = "gfx/interface/goals/restauration_of_austria_hungary.dds"
+	}
+	SpriteType = { 
+		name = "GFX_serbian_crisis"
+		texturefile = "gfx/interface/goals/serbian_crisis.dds"
+	}
+	SpriteType = { 
+		name = "GFX_budapest_agreement"
+		texturefile = "gfx/interface/goals/budapest_agreement.dds"
+	}
+    SpriteType = { 
+		name = "GFX_keep_government"
+		texturefile = "gfx/interface/goals/keep_government.dds"
+	}
+	SpriteType = { 
+		name = "GFX_befriend_ottomans"
+		texturefile = "gfx/interface/goals/befriend_ottomans.dds"
+	}
+	SpriteType = { 
+		name = "GFX_relocate_austria"
+		texturefile = "gfx/interface/goals/relocate_austria.dds"
+	}
+	SpriteType = { 
+		name = "GFX_relocate_hungary"
+		texturefile = "gfx/interface/goals/relocate_hungary.dds"
+	}
+	SpriteType = { 
+		name = "GFX_anti_separatism_corps"
+		texturefile = "gfx/interface/goals/anti_separatism_corps.dds"
+	}
+	SpriteType = { 
+		name = "GFX_expand_empire"
+		texturefile = "gfx/interface/goals/expand_empire.dds"
+	}
+	SpriteType = { 
+		name = "GFX_strengthen_house"
+		texturefile = "gfx/interface/goals/strengthen_house.dds"
+	}
+	SpriteType = { 
+		name = "GFX_prepare_worst"
+		texturefile = "gfx/interface/goals/prepare_worst.dds"
+	}
+	SpriteType = { 
+		name = "GFX_home_of_revolution"
+		texturefile = "gfx/interface/goals/home_of_revolution.dds"
+	}
+	SpriteType = { 
+		name = "GFX_weakness_democracy"
+		texturefile = "gfx/interface/goals/weakness_democracy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_napoleonic_claims"
+		texturefile = "gfx/interface/goals/napoleonic_claims.dds"
+	}
+	SpriteType = { 
+		name = "GFX_french_colonial_claims"
+		texturefile = "gfx/interface/goals/french_colonial_claims.dds"
+	}
+	SpriteType = { 
+		name = "GFX_question_treaty"
+		texturefile = "gfx/interface/goals/question_treaty.dds"
+	}
+	SpriteType = { 
+		name = "GFX_french_glory"
+		texturefile = "gfx/interface/goals/french_glory.dds"
+	}
+	SpriteType = { 
+		name = "GFX_french_propaganda"
+		texturefile = "gfx/interface/goals/french_propaganda.dds"
+	}
+	SpriteType = { 
+		name = "GFX_pax_germanica"
+		texturefile = "gfx/interface/goals/pax_germanica.dds"
+	}
+}

@@ -1,0 +1,31 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_usga_button"
+		texturefile = "gfx/interface/usga_button.dds"
+	}
+	spriteType = {
+		name = "GFX_usga_title"
+		texturefile = "gfx/interface/usga_title.dds"
+	}
+	spriteType = {
+		name = "GFX_usga_logo"
+		texturefile = "gfx/interface/usga_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_usga_country_entry"
+		texturefile = "gfx/interface/usga_country_entry.dds"
+	}
+	spriteType = {
+		name = "GFX_usga_leader_entry"
+		texturefile = "gfx/interface/usga_leader_entry.dds"
+	}
+	spriteType = {
+		name = "GFX_usga_window"
+		texturefile = "gfx/interface/usga_window.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_ruler_portrait"
+		texturefile = "gfx/interface/ruler_portrait.dds"
+	}
+}

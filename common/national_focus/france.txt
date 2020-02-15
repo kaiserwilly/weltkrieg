@@ -1,0 +1,577 @@
+################
+#####FRANCE#####
+################
+
+focus_tree = {
+	id = french_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = FRA
+		}
+	}
+	
+	default = no
+
+continuous_focus_position = { x = 2000 y = 1600 }
+
+#########################
+#POLITIC BRANCH
+#########################
+
+#FRENCH GLORY	
+	focus = {
+		id = FRA_good_days
+		icon = GFX_french_glory
+		x = 6
+		y = 0
+		cost = 1 
+		
+		ai_will_do = {	
+		}
+		
+		available = {
+		country_exists = FRA
+		}
+		
+		completion_reward = {
+		    add_popularity = {
+                ideology = fascism
+                popularity = 0.3
+            }
+			add_stability = 0.15
+		}
+	}
+
+#PARIS COUP	
+	focus = {
+		id = FRA_paris_coup
+		x = 4
+		y = 1
+		icon = GFX_home_of_revolution
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_good_days
+		}
+		
+		mutually_exclusive = {
+		focus = FRA_seize_power_democratically
+		}
+		
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#RECRUITMENT PROPAGANDA	
+	focus = {
+		id = FRA_propaganda
+		icon = GFX_french_propaganda
+		x = 4
+		y = 2
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_paris_coup
+		}
+			
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#SUPPORT BORDEAUX	
+	focus = {
+		id = FRA_support_bordeaux
+		x = 4
+		y = 3
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_propaganda
+		}
+			
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#THE WEAKNESS OF DEMOCRACY
+	focus = {
+		id = FRA_seize_power_democratically
+		icon = GFX_weakness_democracy
+		x = 8
+		y = 1
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_good_days
+		}
+		
+		mutually_exclusive = {
+		focus = FRA_paris_coup
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#SPEECH AGAISNT FRENCH REPUBLIC
+	focus = {
+		id = FRA_speech_agaisnt_fr
+		x = 8
+		y = 2
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_seize_power_democratically
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#PROMISE REFORMS
+	focus = {
+		id = FRA_promise_reforms
+		x = 8
+		y = 3
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_speech_agaisnt_fr
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#SECURE THE NEW STATE
+	focus = {
+		id = FRA_secure_state
+		x = 6
+		y = 5
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_promise_reforms
+		focus = FRA_support_bordeaux
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#REBUILD THE NATION
+	focus = {
+		id = FRA_rebuild_nation
+		x = 6
+		y = 6
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_secure_state
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#REBUILD THE ARMY
+	focus = {
+		id = FRA_rebuild_army
+		x = 11
+		y = 6
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_secure_state
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#REBUILD THE NAVY
+	focus = {
+		id = FRA_rebuild_navy
+		x = 1
+		y = 6
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_secure_state
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+
+
+#############################
+#FACTION BRANCH
+#############################
+
+#QUESTION NUREMBERG
+	focus = {
+		id = FRA_question_nuremberg
+		icon = GFX_question_treaty
+		x = 20
+		y = 0
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#GRAND EST
+	focus = {
+		id = FRA_grand_est
+		x = 17
+		y = 1
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_question_nuremberg
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#RETAKE ROUSSILION
+	focus = {
+		id = FRA_roussilion
+		x = 23
+		y = 1
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_question_nuremberg
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#ULTIMATUM TO FRENCH REPUBLIC
+	focus = {
+		id = FRA_ultimatum_fr
+		x = 20
+		y = 1
+		cost = 1 
+		
+		ai_will_do = {		
+		}
+		
+		prerequisite = {
+		focus = FRA_question_nuremberg
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#LIGUE DES FASCISTES
+	focus = {
+		id = FRA_ligue
+		x = 20
+		y = 2
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_ultimatum_fr
+		}
+		prerequisite = {
+		focus = FRA_grand_est
+		}
+		prerequisite = {
+		focus = FRA_roussilion
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#MANIFESTO FASCISM
+	focus = {
+		id = FRA_manifesto
+		x = 20
+		y = 3
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_ligue
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#NAPOLEONIC CLAIMS
+	focus = {
+		id = FRA_nap_claims
+		icon = GFX_napoleonic_claims
+		x = 18
+		y = 4
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_manifesto
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#OUR COLONIAL EMPIRE
+	focus = {
+		id = FRA_colonial_empire
+		icon = GFX_french_colonial_claims
+		x = 22
+		y = 4
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_manifesto
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}	
+	
+#BELGIAN CRISIS
+	focus = {
+		id = FRA_belgian_crisis
+		x = 20
+		y = 6
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_nap_claims
+		}
+		prerequisite = {
+		focus = FRA_colonial_empire
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#SUPPORT REXISM
+	focus = {
+		id = FRA_rexism
+		x = 20
+		y = 7
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_belgian_crisis
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#SUPPORT REXISM
+	focus = {
+		id = FRA_rexism
+		x = 20
+		y = 7
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_belgian_crisis
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#POLISH LEGIONS
+	focus = {
+		id = FRA_polish_legions
+		x = 16
+		y = 6
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_nap_claims
+		}
+		prerequisite = {
+		focus = FRA_colonial_empire
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#MIDDLE EAST AFFAIRS
+	focus = {
+		id = FRA_middle_east
+		x = 24
+		y = 6
+		cost = 1 
+		
+		prerequisite = {
+		focus = FRA_nap_claims
+		}
+		prerequisite = {
+		focus = FRA_colonial_empire
+		}
+		
+		ai_will_do = {		
+		}
+	
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+}	
+#######################
+#EXPANSIONISM BRANCH
+#######################
+

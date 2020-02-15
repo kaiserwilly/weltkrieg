@@ -1,0 +1,21 @@
+
+ai_historical_focus_list_GER = {
+	ai_national_focuses = {
+		GER_austrian_situation
+		GER_go_with_habsburgs
+		GER_austria_is_germany
+		GER_place_in_sun
+		GER_german_imperialism
+		GER_warsaw_congress
+		GER_former_territories
+		GER_berlin_conference
+		GER_colonial_government
+		GER_swiss_partition
+		GER_holy_roman
+		GER_berlin_pakt
+		GER_russian_civil_war
+		GER_stay_with_romanovs
+		GER_release_suez
+		GER_morocco_is_spain
+	}
+}
