@@ -591,6 +591,14 @@ BOH = {
 	color = rgb { 255 102 102 }
 	color_ui = rgb { 255 73 121 }
 }
+TFR = {
+	color = rgb { 51  51  255 }
+	color_ui = rgb { 255 73 121 }
+}
+TFE = {
+	color = { 0  3  120 }
+	color_ui = rgb { 255 73 121 }
+}
 D01 = {
 	color = rgb { 200 100 31 }
 	color_ui = rgb { 245 123 38 }

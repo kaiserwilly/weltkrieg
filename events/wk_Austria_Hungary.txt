@@ -51,47 +51,6 @@ country_event = {
 	}
 }
 
-#UPRISINGS IN GALICIA
-country_event = {
-	id = wk_auh.11
-	title = wk_auh.11.t 
-	desc = wk_auh.11.d
-	
-	hidden = yes
-	
-	fire_only_once = yes
-
-    trigger = {
-    date > 1936.05.01
-    date < 1936.05.03
-    }
-	
-	mean_time_to_happen = {
-	    days = 1
-	}
-	
-	immediate = { 
-		if = { 
-		    limit = {
-			    AUH = { separatism > 0.2 }
-				AUH = { separatism < 0.35 }
-			}	     
-		    GAL = { transfer_state = 89 }
-			GAL = { load_oob = GAL_1936 }
-            GAL = { declare_war_on = { type = annex_everything    target = AUH } }			
-	    }
-		if = { 
-		    limit = {
-			    AUH = { separatism > 0.35 }
-			}	     
-		    GAL = { transfer_state = 89 }
-            GAL = { transfer_state = 91 }
-            GAL = { load_oob = GAL_1936_1 }	
-            GAL = { declare_war_on = { type = annex_everything    target = AUH } }			
-	    }
-	}
-}
-
 #ANNEX SERBIA
 country_event = {
 	id = wk_auh.1

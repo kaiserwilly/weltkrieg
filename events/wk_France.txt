@@ -1,0 +1,233 @@
+﻿###########################
+# French Events
+###########################
+
+add_namespace = France
+
+# Civil wars
+country_event = {
+	id = France.1
+	title = France.1.t
+	desc = spain.2.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EVE
+		original_tag = EVE
+		FRA = { 
+		has_democratic_government = yes
+		exists = yes
+		has_completed_focus = 
+		has_idea = Edge_of_the_CW
+		date > 1938.4.12 
+		
+		}
+	}
+
+
+	
+	option = { # Civl war
+		name = spain.1.a
+		
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				TFE = {
+					add_state_core = PREV
+				}
+			}
+			TFE = {
+			
+			
+			
+			TFE = {	transfer_state =  15 }
+			TFE = {	transfer_state =  14 }
+			TFE = {	transfer_state =  23 }
+			TFE = {	transfer_state =  19 }
+			TFE = {	transfer_state =  31 }
+			TFE = {	transfer_state =  25 }
+			TFE = {	transfer_state =  33 }
+			TFE = {	transfer_state =  24 }
+			TFE = {	transfer_state =  18 }
+			TFE = {	transfer_state =  785 }
+			TFE = {	transfer_state =  30 }
+			
+			
+			}
+			
+			
+			}
+			TFE = {
+			declare_war_on = { target = FRA    type = annex_everything }
+			load_oob = "TFECW_1936"
+				add_timed_idea = { idea = French_CW days = 100 }
+			}
+			FRA = {
+				remove_ideas = Edge_of_the_CW
+				country_event = { id = France.2 days = 0 }
+				load_oob = "FRACW_1936"
+				add_timed_idea = { idea = French_CW days = 100 }
+		
+		if = {
+				limit = {
+					has_id = 1
+					has_id = 2
+					has_id = 3
+					has_id = 4
+					has_id = 5
+					has_id = 6
+					has_id = 7
+					has_id = 8
+					has_id = 9
+			} 
+			
+				set_nationality = TFE
+				remove_unit_leader = 1
+				remove_unit_leader = 2
+				remove_unit_leader = 3
+				remove_unit_leader = 4
+				remove_unit_leader = 5
+				remove_unit_leader = 6
+				remove_unit_leader = 7
+				remove_unit_leader = 8
+				remove_unit_leader = 9
+				
+			}
+			
+		}
+
+
+	}
+}
+
+
+country_event = { #switch the player to the french empire
+	id = France.2
+	title = France.2.t
+	desc = spain.2.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+	FRA = {
+	has_idea = Edge_of_the_CW
+	date > 1938.4.12 
+	}
+	}
+	
+	option = {
+		name = spain.1.a 
+	
+	TFE = {change_tag_from = FRA}
+	
+	
+	}
+} #create the country event to execute the civil wars
+country_event = {
+	id = France.3
+	title = France.3.t
+	desc = spain.4.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+	AND = {
+		has_completed_focus = 
+	TFE = { 
+		exists = yes
+		has_war_with = FRA
+		}
+	}
+
+	}
+	
+	option = {
+		name = fra.1.a 
+	hidden_effect = {
+	
+		EVE = {	transfer_state =  713 } 
+	}
+	
+	}
+}
+
+#the repulican navy goes on exil
+country_event = {
+	id = France.4
+	title = France.4.t
+	desc = spain.4.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = { 
+		exists = yes
+		surrender_progress > 0.75
+		#has_war_with = TFE
+		}
+		TFE = { 
+		exists = yes
+		has_war_with = FRA
+		has_full_control_of_state = 16
+		}
+		
+
+
+		
+
+	}
+	
+	option = {
+		name = fra.1.a 
+		
+		hidden_effect = {
+	
+	TFR = {change_tag_from = FRA}
+		TFR = {
+			
+			
+			TFR = {	transfer_state =  786 }
+			TFR = {	transfer_state =  272 }
+			TFR = {	transfer_state =  557 }
+			TFR = {	transfer_state =  556 }
+			TFR = {	transfer_state =  782 }
+			TFR = {	transfer_state =  515 }
+			TFR = {	transfer_state =  781 }
+			TFR = {	transfer_state =  778 }
+			TFR = {	transfer_state =  779 }
+			TFR = {	transfer_state =  780 }
+			TFR = {	transfer_state =  775 }
+			
+			
+			}
+			every_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				TFR = {
+					add_state_core = PREV
+				}
+				FRA = {
+					remove_state_core = PREV
+				}
+			}
+		FRA = {
+			every_unit_leader = {
+				set_nationality = TFR
+			}
+			country_event = { id = France.5 days = 0 }
+		}
+		
+		}
+	
+	}
+}

@@ -34,28 +34,27 @@ set_convoys = 200
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "1932.5.1"
-	election_frequency = 48
+	last_election = "1933.7.1"
+	election_frequency = 36
 	elections_allowed = no
 }
 set_popularities = {
 	democratic = 74
-	monarchism = 14
-	communism = 22
+	fascism = 12
+	communism = 6
+	monarchism = 8
 }
-
-create_faction = ligue_des_fascistes
-add_to_faction = FRA
 
 add_ideas = {
 }
 
 create_country_leader = {
-	name = "Napoleon VI"
-	desc = "NAPOLEON_VI_DESC"
-	picture = "Napoleon_VI.dds"
+	name = "Édouard Daladier"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = "Portrait_France_Edouard_Daladier.dds"
 	expire = "1965.1.1"
-	ideology = napoleonism
+	ideology = socialism
 	traits = {
+		stout_defender
 	}
 }
