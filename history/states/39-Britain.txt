@@ -1,7 +1,7 @@
 state={
 	id=39
 	name="STATE_39" # South Tyrol
-	manpower = 400650
+	manpower = 641650
 	
 	state_category = town
 	

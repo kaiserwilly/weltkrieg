@@ -22,6 +22,7 @@ guiTypes = {
 		size = { width = 840 height = 660 }
 		orientation = center
 		moveable = yes
+		allwaystransparent = no
 
 		fade_time = 300
 		fade_type = linear
@@ -79,6 +80,7 @@ guiTypes = {
 		size = { width = 840 height = 660 }
 		orientation = center
 		moveable = no
+		alwaystransparent = no
 		
 		iconType = {
             name = "USGA_nation_flag"

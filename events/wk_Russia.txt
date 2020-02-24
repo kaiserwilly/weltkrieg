@@ -9,3 +9,25 @@ add_namespace = wk_rus
 #################################################################
 
 #################################################################
+#Russian Civil War
+country_event = {
+	id = wk_rus.1
+	title = wk_rus.1.t
+	desc = wk_rus.1.d 
+	
+	hidden = yes
+	
+	trigger = {
+    date > 1933.01.01
+	date < 1933.01.03
+    }
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	immediate = {
+	    RSE = { declare_war_on = { type = annex_everything    target = SOV } }
+		SOV = { declare_war_on = { type = annex_everything    target = RSE } }
+    }
+}

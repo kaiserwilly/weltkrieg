@@ -601,9 +601,9 @@ continuous_focus_position = { x = 40 y = 1200 }
 #DEMOCRATIC BRANCH#
 ###################
 
-#REFERENDUM
+#Retake Galicia
 	focus = {
-		id = AUH_referendum
+		id = AUH_reforms
 		x = 15
 		y = 0
 		cost = 1 
