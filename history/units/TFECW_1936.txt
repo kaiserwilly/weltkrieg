@@ -1,0 +1,205 @@
+division_template = {
+	name = "Garde Impériale Révolutionaire"
+	is_locked = yes
+
+	division_names_group = FRA_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "1.Garde Impériale Révolutionaire"
+		location = 3552
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "2.Garde Impériale Révolutionaire"
+		location = 3552
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "3.Garde Impériale Révolutionaire"
+		location = 11465
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "4.Garde Impériale Révolutionaire"
+		location = 11465
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "5.Garde Impériale Révolutionaire"
+		location = 9510
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "6.Garde Impériale Révolutionaire"
+		location = 6657
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "6.Garde Impériale Révolutionaire"
+		location = 9737
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "7.Garde Impériale Révolutionaire"
+		location = 9737
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "8.Garde Impériale Révolutionaire"
+		location = 6766
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "9.Garde Impériale Révolutionaire"
+		location = 6766
+		division_template = "Garde Impériale Révolutionaire"
+	}
+
+	division = {
+		name = "10.Garde Impériale Révolutionaire"
+		location = 6449
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "11.Garde Impériale Révolutionaire"
+		location = 9434
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "12.Garde Impériale Révolutionaire"
+		location = 485
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "13.Garde Impériale Révolutionaire"
+		location = 3447
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "14.Garde Impériale Révolutionaire"
+		location = 11420
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "15.Garde Impériale Révolutionaire"
+		location = 454
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "16.Garde Impériale Révolutionaire"
+		location = 3402
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "17.Garde Impériale Révolutionaire"
+		location = 3447
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "18.Garde Impériale Révolutionaire"
+		location = 9523
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "19.Garde Impériale Révolutionaire"
+		location = 575
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "20.Garde Impériale Révolutionaire"
+		location = 6545
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "21.Garde Impériale Révolutionaire"
+		location = 551
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "22.Garde Impériale Révolutionaire"
+		location = 9490
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "23.Garde Impériale Révolutionaire"
+		location = 11549
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "24.Garde Impériale Révolutionaire"
+		location = 3533
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "25.Garde Impériale Révolutionaire"
+		location = 6531
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "26.Garde Impériale Révolutionaire"
+		location = 11834
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "27.Garde Impériale Révolutionaire"
+		location = 6613
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "28.Garde Impériale Révolutionaire"
+		location = 512
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "29.Garde Impériale Révolutionaire"
+		location = 6533
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "30.Garde Impériale Révolutionaire"
+		location = 3549
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "31.Garde Impériale Révolutionaire"
+		location = 6688
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "32.Garde Impériale Révolutionaire"
+		location = 11611
+		division_template = "Garde Impériale Révolutionaire"
+	}
+
+	division = {
+		name = "33.Garde Impériale Révolutionaire"
+		location = 3655
+		division_template = "Garde Impériale Révolutionaire"
+	}
+	division = {
+		name = "34.Garde Impériale Révolutionaire"
+		location = 6651
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "35.Garde Impériale Révolutionaire"
+		location = 3534
+		division_template = "Garde Impériale Révolutionaire"
+	}
+		division = {
+		name = "36.Garde Impériale Révolutionaire"
+		location = 6618
+		division_template = "Garde Impériale Révolutionaire"
+	}
+}

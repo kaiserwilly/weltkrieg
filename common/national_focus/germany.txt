@@ -115,9 +115,9 @@ focus_tree = {
 		}
 	}
 
-#OPERATION GOLF
+#Colonial Ambitions
 	focus = {
-		id = GER_operation_golf
+		id = GER_colonial_ambitions
 		x = -8
 		y = 2
 		cost = 1
@@ -131,9 +131,50 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				has_government = monarchism
-			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#Revive the Mittelafrika's Plan
+	focus = {
+		id = GER_mittelafrika
+		x = -6
+		y = 3
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_colonial_ambitions
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#AIM AT THE EAST
+	focus = {
+		id = GER_aim_east
+		x = -10
+		y = 3
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_colonial_ambitions
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
 		}
 		
 		completion_reward = {
@@ -154,6 +195,93 @@ focus_tree = {
 	
 		ai_will_do = {
 			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#STRENGTHEN LEAGUE OF NATIONS
+	focus = {
+		id = GER_strengthen_league
+		x = 8
+		y = 2
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_pax_germanica
+        }
+		
+		mutually_exclusive = {
+		focus = GER_berlin_first
+		}
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#BERLIN FIRST
+	focus = {
+		id = GER_berlin_first
+		x = 12
+		y = 2
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_pax_germanica
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		mutually_exclusive = {
+		focus = GER_strengthen_league
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#LEAVE LEAGUE OF NATIONS
+	focus = {
+		id = GER_leave_league
+		x = 12
+		y = 3
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_berlin_first
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		mutually_exclusive = {
+		focus = GER_strengthen_league
 		}
 		
 		available = {
@@ -194,8 +322,8 @@ focus_tree = {
 
 #AUSTRIA'S COLLAPSE
 	focus = {
-		id = GER_austria_collapse
-		x = 0
+		id = GER_habsburg_collapse
+		x = -3
 		y = 3
 		cost = 1
 		
@@ -220,7 +348,7 @@ focus_tree = {
 #RUSSIAN CIVIL WAR
 	focus = {
 		id = GER_russia_civil_war
-		x = 0
+		x = 3
 		y = 3
 		cost = 1
 		
@@ -242,15 +370,15 @@ focus_tree = {
 		}
 	}
 
-#RUSSIAN CIVIL WAR
+#FORM KINGDOM OF FINLAND
 	focus = {
-		id = GER_russia_civil_war
-		x = 0
-		y = 3
+		id = GER_form_finland
+		x = 3
+		y = 4
 		cost = 1
 		
 		prerequisite = {
-        focus = GER_age_revolution
+        focus = GER_russia_civil_war
         }
 	
 		ai_will_do = {
@@ -266,5 +394,143 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+#GERMAN KING
+	focus = {
+		id = GER_german_king
+		x = 1
+		y = 5
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_form_finland
+        }
+		
+		mutually_exclusive = {
+        focus = GER_romanov_exile
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#SECRET DEAL WITH USSR
+	focus = {
+		id = GER_deal_ussr
+		x = 1
+		y = 6
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_german_king
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#ROMANOV'S EXILE
+	focus = {
+		id = GER_romanov_exile
+		x = 5
+		y = 5
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_form_finland
+        }
+		
+		mutually_exclusive = {
+        focus = GER_german_king
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#MILITAR SUPPORT TO ROMANOVS
+	focus = {
+		id = GER_support_romanovs
+		x = 5
+		y = 6
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_romanov_exile
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+#SIGN AN ARMSTICE
+	focus = {
+		id = GER_armstice_ussr
+		x = 3
+		y = 7
+		cost = 1
+		
+		prerequisite = {
+        focus = GER_support_romanovs
+        }
+		prerequisite = {
+        focus = GER_deal_ussr
+        }
+	
+		ai_will_do = {
+			factor = 100		
+		}
+		
+		available = {
+			OR = {
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+
 	
 }	

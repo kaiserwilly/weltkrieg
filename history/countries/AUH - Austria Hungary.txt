@@ -59,6 +59,7 @@ set_popularities = {
 }
 
 puppet = YUG
+puppet = UKN
 
 add_ideas = {
     multinational_state

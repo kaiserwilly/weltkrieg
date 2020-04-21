@@ -141,10 +141,6 @@ CAN = {
 	color = rgb { 119 48 39 }
 	color_ui = rgb { 155 62 51 }
 }
-CHI = {
-	color = hsv { 0.18 0.6 0.9 } #255 244 190
-	color_ui = hsv { 0.18 0.3 0.9 }
-}
 CHL = {
 	color = rgb { 155 101 107 }
 	color_ui = rgb { 202 131 139 }
@@ -597,6 +593,10 @@ TFR = {
 }
 TFE = {
 	color = { 0  3  120 }
+	color_ui = rgb { 255 73 121 }
+}
+CHI = {
+	color = { 0  0  153 }
 	color_ui = rgb { 255 73 121 }
 }
 D01 = {

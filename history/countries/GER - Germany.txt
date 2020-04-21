@@ -58,7 +58,8 @@ set_popularities = {
 	monarchism = 62
 }
 
-puppet = EPS
+puppet = POL
+puppet = NPR
 
 add_ideas = {
 	GER_victors_of_ww1

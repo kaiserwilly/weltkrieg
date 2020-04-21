@@ -3,7 +3,7 @@ state={
 	name="STATE_742"
 
 	history={
-		owner = CNA
+		owner = SOV
 		victory_points = {
 			1384 1
 		}
@@ -11,7 +11,7 @@ state={
 			infrastructure = 1
 
 		}
-		add_core_of = CNA
+		add_core_of = SOV
 
 	}
 

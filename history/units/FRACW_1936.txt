@@ -1,0 +1,98 @@
+division_template = {
+	name = "Garde Républicaine"
+	is_locked = yes
+
+	division_names_group = FRA_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "1. Garde Républicaine"
+		location = 11506
+		division_template = "Garde Républicaine"
+	}
+
+		division = {
+		name = "2. Garde Républicaine"
+		location = 575
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "3. Garde Républicaine"
+		location = 9500
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "4. Garde Républicaine"
+		location = 11483
+		division_template = "Garde Républicaine"
+	}
+		division = {
+		name = "5. Garde Républicaine"
+		location = 3476
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "6. Garde Républicaine"
+		location = 6504
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "7. Garde Républicaine"
+		location = 11606
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "8. Garde Républicaine"
+		location = 9523
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "9. Garde Républicaine"
+		location = 6547
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "10. Garde Républicaine"
+		location = 3506
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "11. Garde Républicaine"
+		location = 9725
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "12. Garde Républicaine"
+		location = 11834
+		division_template = "Garde Républicaine"
+	}
+		division = {
+		name = "13. Garde Républicaine"
+		location = 11834
+		division_template = "Garde Républicaine"
+	}
+		division = {
+		name = "14. Garde Républicaine"
+		location = 911
+		division_template = "Garde Républicaine"
+	}
+		division = {
+		name = "15. Garde Républicaine"
+		location = 6613
+		division_template = "Garde Républicaine"
+	}
+	division = {
+		name = "16. Garde Républicaine"
+		location = 3594
+		division_template = "Garde Républicaine"
+	}
+
+}

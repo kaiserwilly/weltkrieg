@@ -1,0 +1,2392 @@
+focus_tree = {
+	id = france
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TFR
+		}
+	}
+	default = no
+	
+	focus = {
+		id = Officialiser_le_gouvernement_de_Dakar
+		icon = GFX_goal_unknown
+		cost = 12
+		x = 23
+		y = 0
+		
+				completion_reward = {
+					add_political_power = 100
+					add_stability = 0.1
+						swap_ideas = {
+							remove_idea = Not_recognize_gouvernement1
+							add_idea = Not_recognize_gouvernement2
+						}
+				}
+
+	}
+	focus = {
+		id = Reorganiser_l'armee_de_resistant
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 43
+		y = 0
+				available = {
+					has_country_flag = Goodways
+				}
+		completion_reward = {
+		army_experience = 20
+		}
+	}
+	focus = {
+		id = Legitimer_le_gouvernement
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Officialiser_le_gouvernement_de_Dakar
+		}
+		x = 23
+		y = 1
+		
+				completion_reward = {
+					add_political_power = 50
+					add_stability = 0.05
+						swap_ideas = {
+							remove_idea = Not_recognize_gouvernement2
+							add_idea = Not_recognize_gouvernement3
+						}
+				}
+
+	}
+	focus = {
+		id = Demander_a_etre_reconnu
+		icon = GFX_goal_unknown
+		cost = 5,00
+		prerequisite = {
+			focus = Legitimer_le_gouvernement
+		}
+		x = 23
+		y = 2
+		completion_reward = {
+							USA = {
+							country_event = {
+									id = France.6
+								}
+						}
+							ENG = {
+							country_event = {
+									id = France.7
+								}
+						}
+							GER = {
+							country_event = {
+									id = France.8
+								}
+						}
+			}
+	}
+	focus = {
+		id = Devenir_un_etat_voyou
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Demander_a_etre_reconnu
+		}
+		mutually_exclusive = {
+			focus = Develloper_les_routes
+		}
+		x = 20
+		y = 3
+
+	}
+	focus = {
+		id = Develloper_les_routes
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Demander_a_etre_reconnu
+		}
+		mutually_exclusive = {
+			focus = Devenir_un_etat_voyou
+		}
+		x = 26
+		y = 3
+				available = {
+				AND = {
+						OR = {
+							has_country_flag = RecobyGER
+							has_country_flag = RecobyUK
+							has_country_flag = RecobyUS
+						}
+					}
+				}
+		completion_reward = {
+				set_country_flag = Goodways
+				
+				
+		
+							557 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+								272 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+								 556 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+							781 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+	}
+	}
+	focus = {
+		id = De_lest_a_louest_en_moins_de24h
+		icon = GFX_goal_unknown
+		cost = 12
+		prerequisite = {
+			focus = Develloper_les_routes
+		}
+		x = 26
+		y = 4
+		
+		complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+						
+				random_owned_controlled_state = {
+
+			
+					add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				}
+					random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				}
+
+	}
+	}
+	focus = {
+		id = Accorder_la_nationalité_a_tout_les_citoyens
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = De_lest_a_louest_en_moins_de24h
+		}
+		x = 22
+		y = 5
+		completion_reward = {
+			every_state = {
+					limit = {
+					is_controlled_by = TFR
+						NOT = {
+							is_core_of = TFR
+							}
+					}
+				TFR = {
+					add_state_core = PREV
+				}
+			}
+		}
+	}
+	focus = {
+		id = demander_desconscions_aux_allemands
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Accorder_la_nationalité_a_tout_les_citoyens
+		}
+		x = 24
+		y = 6
+			available = {
+					has_country_flag = RecobyGER
+				}
+						completion_reward = {
+						GER = {
+					
+						country_event = { id = France.17 days = 0 }
+			
+			}
+		}
+
+	}
+	focus = {
+		id = Deboisement_des_foret
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = De_lest_a_louest_en_moins_de24h
+		}
+		x = 27
+		y = 5
+		completion_reward = {
+						780 = {
+							add_extra_state_shared_building_slots = 2
+						}
+						779 = {
+							add_extra_state_shared_building_slots = 2
+						}
+						778 = {
+							add_extra_state_shared_building_slots = 2
+						}
+						556 = {
+							add_extra_state_shared_building_slots = 2
+						}
+					}
+	}
+	focus = {
+		id = Creation_decole_superieur
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Deboisement_des_foret
+		}
+		x = 26
+		y = 6
+			completion_reward = {
+			add_stability = 0.1
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = Creer_de_nouvelle_industrie
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Creation_decole_superieur
+		}
+		x = 26
+		y = 7
+		
+		completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+							random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = Subvention_des_entreprises_locales
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Creer_de_nouvelle_industrie
+		}
+		x = 26
+		y = 8
+
+				completion_reward = {
+				add_stability = 0.05
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+							random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = Delloper_l'industrie_de_larmement
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Deboisement_des_foret
+		}
+		x = 28
+		y = 6
+
+				completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+							random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				}
+	}
+}
+	focus = {
+		id = Developpement_de_l'industrie_militaire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Delloper_l'industrie_de_larmement
+		}
+		x = 28
+		y = 7
+		
+				completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+							random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+										random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+						random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = Extention_des_Usines_militaire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Developpement_de_l'industrie_militaire
+		}
+		x = 28
+		y = 8
+		
+						completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+							random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+										random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+						random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = Evacuer_les_veterans
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Reorganiser_l'armee_de_resistant
+		}
+		x = 32
+		y = 1
+		completion_reward = {
+		add_manpower = 12000
+		army_experience = 20
+		}
+	}
+	focus = {
+		id = Apprendre_des_erreurs_passé
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Evacuer_les_veterans
+		}
+		x = 30
+		y = 2
+		
+			completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = Etablir_de_nouvelle_Strategie
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Apprendre_des_erreurs_passé
+		}
+		x = 30
+		y = 3
+
+		completion_reward = {
+		add_war_support = 0.05
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = Creation_de_chantier_navaux
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Delloper_l'industrie_de_larmement
+		}
+		x = 30
+		y = 7
+completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				
+				}
+		}
+	}
+	focus = {
+		id = Extention_des_chantier_navaux
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Creation_de_chantier_navaux
+		}
+		x = 30
+		y = 8
+		
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				
+				}
+		}
+
+	}
+	focus = {
+		id = Mobilisation_economique
+		icon = GFX_goal_unknown
+		cost = 14
+		prerequisite = {
+			focus = Extention_des_Usines_militaire
+		}
+		prerequisite = {
+			focus = Extention_des_chantier_navaux
+		}
+		x = 29
+		y = 9
+			completion_reward = {
+						if = {
+		limit = { has_idea = Looser_of_the_centuriesa2}
+		custom_effect_tooltip = USA_great_depression_down_tt
+		remove_ideas = Looser_of_the_centuriesa2
+	}
+	if = {
+		limit = { has_idea = Looser_of_the_centuries}
+		custom_effect_tooltip = USA_great_depression_down_tt
+		swap_ideas = {
+			remove_idea = Looser_of_the_centuries
+			add_idea = Looser_of_the_centuriesa1
+		}
+	}
+		if = {
+		limit = { has_idea = Looser_of_the_centuriesa1}
+		custom_effect_tooltip = USA_great_depression_down_tt
+		swap_ideas = {
+			remove_idea = Looser_of_the_centuriesa1
+			add_idea = Looser_of_the_centuriesa2
+		}
+	}
+					add_war_support = 0.05
+				}
+
+	}
+	focus = {
+		id = Moderniser_le_materiel_dinfanterie
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Evacuer_les_veterans
+		}
+		x = 32
+		y = 2
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+
+	}
+	focus = {
+		id = Moderniser_Lartillerie
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Moderniser_le_materiel_dinfanterie
+		}
+		x = 32
+		y = 3
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = Develloper_des_blindes
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Evacuer_les_veterans
+		}
+		x = 35
+		y = 2
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = Blinde_de_debarquement
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Develloper_des_blindes
+		}
+		mutually_exclusive = {
+			focus = Blinde_polyvalent
+		}
+		x = 34
+		y = 3
+		completion_reward = {
+						add_tech_bonus = {
+					name = nav_armor_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+					technology = amphibious_tank_2 
+				}
+		}
+	}
+	focus = {
+		id = Blinde_polyvalent
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Develloper_des_blindes
+		}
+		mutually_exclusive = {
+			focus = Blinde_de_debarquement
+		}
+		x = 36
+		y = 3
+		completion_reward = {
+				add_tech_bonus = {
+					name = med_armor_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+					technology = basic_medium_tank
+				}
+		}
+	}
+	focus = {
+		id = Exposer_Le_prestige_militaire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Etablir_de_nouvelle_Strategie
+			}
+		prerequisite = {
+			focus = Moderniser_Lartillerie
+		}
+		prerequisite = {
+			
+			focus = Blinde_de_debarquement
+			focus = Blinde_polyvalent
+		}
+		x = 33
+		y = 5
+						completion_reward = {
+						if = {
+		limit = { has_idea = Looser_of_the_centuriesa2}
+		custom_effect_tooltip = USA_great_depression_down_tt
+		remove_ideas = Looser_of_the_centuriesa2
+	}
+	if = {
+		limit = { has_idea = Looser_of_the_centuries}
+		custom_effect_tooltip = USA_great_depression_down_tt
+		swap_ideas = {
+			remove_idea = Looser_of_the_centuries
+			add_idea = Looser_of_the_centuriesa1
+		}
+	}
+		if = {
+		limit = { has_idea = Looser_of_the_centuriesa1}
+		custom_effect_tooltip = USA_great_depression_down_tt
+		swap_ideas = {
+			remove_idea = Looser_of_the_centuriesa1
+			add_idea = Looser_of_the_centuriesa2
+		}
+	}
+					add_war_support = 0.1
+				}
+	}
+	focus = {
+		id = Faire_appelle_aux_tirrailleur_senegalais
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Exposer_Le_prestige_militaire
+		}
+		x = 32
+		y = 7
+		completion_reward = {
+		load_oob = "Tirailleur"
+		}
+	}
+	focus = {
+		id = Force_Speciale_De_Debarquementt
+		icon = GFX_goal_unknown
+		cost = 12
+		prerequisite = {
+			focus = Exposer_Le_prestige_militaire
+		}
+		x = 36
+		y = 7
+		completion_reward = {
+		add_ideas = FSD
+		
+			hidden_effect = { set_technology = { DD_warfare = 1 } } 
+		}
+ 
+	}
+	focus = {
+		id = Economie_de_guerre 
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Mobilisation_economique
+		}
+		x = 32
+		y = 10
+		completion_reward = {
+						swap_ideas = {
+							remove_idea = civilian_economy
+							add_idea = war_economy
+						}
+		}
+	}
+	focus = {
+		id = Creer_une_nouvelle_arme_delair
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Reorganiser_l'armee_de_resistant
+		}
+		x = 41
+		y = 1
+				completion_reward = {
+				air_experience = 50
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = Priorite_a_la_defense_aerienne
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Creer_une_nouvelle_arme_delair
+		}
+		mutually_exclusive = {
+			focus = Priorite_a_lattaque_aerienne
+		}
+		x = 39
+		y = 2
+						completion_reward = {
+							air_experience = 25
+				add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+	focus = {
+		id = Defense_nationale
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Priorite_a_la_defense_aerienne
+		}
+		mutually_exclusive = {
+			focus = Escorte_des_bombardier
+		}
+		x = 38
+		y = 3
+			completion_reward = {
+					
+				add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+		}
+
+	}
+	focus = {
+		id = Escorte_des_bombardier
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Priorite_a_la_defense_aerienne
+		}
+		mutually_exclusive = {
+			focus = Defense_nationale
+		}
+		x = 40
+		y = 3
+				completion_reward = {
+						
+				add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = early_fighter
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	
+	}
+	focus = {
+		id = Le_Meilleur_escorteur
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Escorte_des_bombardier
+		}
+		x = 40
+		y = 4
+	completion_reward = {
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+				}
+		}
+	}
+	focus = {
+		id = Le_Meilleur_Chasseur
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Defense_nationale
+		}
+		x = 38
+		y = 4
+			completion_reward = {
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+				technology = fighter2
+				technology = fighter3
+				}
+		}
+	}
+	focus = {
+		id = Priorite_a_lattaque_aerienne
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Creer_une_nouvelle_arme_delair
+		}
+		mutually_exclusive = {
+			focus = Priorite_a_la_defense_aerienne
+		}
+		x = 43
+		y = 2
+	
+		completion_reward = {
+		air_experience = 25
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = Bombardement_des_unites
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Priorite_a_lattaque_aerienne
+		}
+		mutually_exclusive = {
+			focus = Destruction_du_pays_ennemi
+		}
+		x = 42
+		y = 3
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = Polyvalence_des_bombardier
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Bombardement_des_unites
+		}
+		x = 42
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = Destruction_du_pays_ennemi
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Priorite_a_lattaque_aerienne
+		}
+		mutually_exclusive = {
+			focus = Bombardement_des_unites
+		}
+		x = 44
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+
+	}
+	focus = {
+		id = Meilleur_bombardier
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Destruction_du_pays_ennemi
+		}
+		x = 44
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				uses = 1
+				ahead_reduction = 2
+				category = cat_strategic_bomber
+			}
+		}
+
+	}
+	focus = {
+		id = Developement_dusine_prive_dans_laeronotique
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Le_Meilleur_Chasseur
+			focus = Le_Meilleur_escorteur
+			focus = Polyvalence_des_bombardier
+			focus = Meilleur_bombardier
+		}
+		x = 41
+		y = 6
+		
+		completion_reward = {
+		add_ideas = Usines_prive_aeronotique
+		
+		
+		}
+	}
+	focus = {
+		id = Reorganiser_la_flotte_exile
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Reorganiser_l'armee_de_resistant
+		}
+		x = 49
+		y = 1
+		
+		
+		
+			completion_reward = {
+			
+				navy_experience = 25
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		
+		}
+
+	}
+	focus = {
+		id = Fonder_lecole_navale_de_dakars
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Reorganiser_la_flotte_exile
+		}
+		x = 49
+		y = 2
+
+		completion_reward = {
+			
+			add_ideas = Dakar_Academy
+				navy_experience = 25
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		
+		}
+	}
+	focus = {
+		id = Lancienne_ecole
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Fonder_lecole_navale_de_dakars
+		}
+		mutually_exclusive = {
+			focus = la_jeune_ecole
+		}
+		x = 47
+		y = 3
+		
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = ca_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = ca_tech
+			}
+			add_tech_bonus = {
+				name = bb_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = cv_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+		
+		}
+
+	}
+	focus = {
+		id = Attaque_des_base_ennemis
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Lancienne_ecole
+		}
+		mutually_exclusive = {
+			focus = Dissuasion
+		}
+		x = 46
+		y = 4
+		
+			completion_reward = {
+					add_tech_bonus = {
+				name = cat_base_strike_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_base_strike 
+			}
+		}
+	}
+	focus = {
+		id = Dissuasion
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Lancienne_ecole
+		}
+		mutually_exclusive = {
+			focus = Attaque_des_base_ennemis
+		}
+		x = 48
+		y = 4
+		
+		
+			completion_reward = {
+					add_tech_bonus = {
+				name = fleet_in_being_tree_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree 
+			}
+		}
+
+	}
+	focus = {
+		id = la_jeune_ecole
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Fonder_lecole_navale_de_dakars
+		}
+		mutually_exclusive = {
+			focus = Lancienne_ecole
+		}
+		x = 51
+		y = 3
+
+
+			completion_reward = {
+					add_tech_bonus = {
+				name = dd_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = ss_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = ss_tech 
+			}
+		}
+	}
+	focus = {
+		id = Devellopement_des_DD
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = la_jeune_ecole
+		}
+		x = 50
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+				name = dd_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = Devellopement_des_Soumarin
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = la_jeune_ecole
+		}
+		x = 52
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = ss_tech 
+			}
+		}
+	}
+	focus = {
+		id = Etranglement_du_commerce
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Devellopement_des_DD
+			focus = Devellopement_des_Soumarin
+		}
+		x = 51
+		y = 5
+		
+	completion_reward = {
+			add_tech_bonus = {
+				name = trade_interdiction_tree_bonus
+				bonus = 1.0
+				uses = 2
+				category = trade_interdiction_tree
+			}
+		}
+
+	}
+	focus = {
+		id = Optimisation_des_torpilles
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Etranglement_du_commerce
+		}
+		x = 51
+		y = 6
+		completion_reward = {
+		add_ideas = the_long_lance 
+	}
+	}
+	focus = {
+		id = Focus_sur_les_navires_secondaires
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Optimisation_des_torpilles
+		}
+		x = 51
+		y = 7
+		completion_reward = {
+						swap_ideas = { 
+							remove_idea = Dakar_Academy
+							add_idea = Dakar_Academya
+						}
+	}
+
+	}
+	focus = {
+		id = Optimiser_les_areoport_navaux
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Attaque_des_base_ennemis
+		}
+		x = 46
+		y = 5
+		completion_reward = {
+				add_tech_bonus = {
+				name = cv_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	focus = {
+		id = Aviation_aeronavale
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Optimiser_les_areoport_navaux
+			focus = Meilleur_bombardier
+			focus = Polyvalence_des_bombardier
+		}
+		x = 46
+		y = 6
+
+			completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = Focus_sur_les_navires_capitaux
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Aviation_aeronavale
+			focus = Guerre_de_front
+		}
+		x = 47
+		y = 7
+			completion_reward = {
+
+						swap_ideas = { 
+							remove_idea = Dakar_Academy
+							add_idea = Dakar_Academyb
+						}
+		}
+
+	}
+	focus = {
+		id = Le_cuirasser_ultime
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Dissuasion
+		}
+		x = 48
+		y = 5
+		
+			completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = bc_tech
+				category = bb_tech
+			}
+		}
+
+	}
+	focus = {
+		id = Guerre_de_front
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Le_cuirasser_ultime
+		}
+		x = 48
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+				name = fleet_in_being_tree_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree 
+			}
+		}
+	}
+	focus = {
+		id = Demander_des_conscession_territoriale_aux_bri
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Accorder_la_nationalité_a_tout_les_citoyens
+		}
+		x = 22
+		y = 6
+						available = {
+							has_country_flag = RecobyUK
+				}
+				completion_reward = {
+									ENG = {
+					
+						country_event = { id = France.15 days = 0 }
+			
+			}
+		}
+
+	}
+	focus = {
+		id = Inviter_les_capitaliste_americain
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Accorder_la_nationalité_a_tout_les_citoyens
+		}
+		x = 20
+		y = 6
+						available = {
+							has_country_flag = RecobyUS
+				}
+				
+		completion_reward = {
+					add_ideas = Capitalist
+		}
+	}
+	focus = {
+		id = Investissement_americain
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Inviter_les_capitaliste_americain
+		}
+		x = 20
+		y = 7
+		
+			
+					completion_reward = {
+					add_stability = 0.1
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+								random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+											random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+		}
+		}
+
+	
+	focus = {
+		id = Extension_de_nationalite
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Demander_des_conscession_territoriale_aux_bri
+			focus = demander_desconscions_aux_allemands
+		}
+		x = 23
+		y = 7
+		
+				completion_reward = {
+				add_stability = -0.1
+			every_state = {
+					limit = {
+					is_controlled_by = TFR
+						NOT = {
+							is_core_of = TFR
+							}
+					}
+				TFR = {
+					add_state_core = PREV
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = Le_Reve_franco-africain
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Investissement_americain
+			focus = Extension_de_nationalite
+		}
+		prerequisite = {
+			focus = Subvention_des_entreprises_locales
+		}
+		x = 24
+		y = 9
+		completion_reward = {
+							add_stability = 0.1
+		remove_ideas = Weakened_economy
+		}
+	}
+	focus = {
+		id = Focus_Sur_L'armement_nationale
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Developement_dusine_prive_dans_laeronotique
+		}
+		prerequisite = {
+			focus = Force_Speciale_De_Debarquementt
+			focus = Focus_sur_les_navires_capitaux
+			focus = Focus_sur_les_navires_secondaires
+		}
+				prerequisite = {
+			focus = Force_Speciale_De_Debarquementt
+			}
+		x = 41
+		y = 9
+				completion_reward = {
+							add_stability = -0.1
+							add_war_support = 0.15
+		add_ideas = Focus_mil
+		}
+
+	}
+	focus = {
+		id = Exposition_de_lEntrainement_Militaire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Economie_de_guerre
+		}
+		prerequisite = {
+			focus = Focus_Sur_L'armement_nationale
+		}
+		x = 37
+		y = 11
+
+			completion_reward = {
+							add_stability = 0.05
+								add_war_support = 0.1
+		remove_ideas = Looser_of_the_centuriesa2
+		}
+	}
+	focus = {
+		id = Planifier_la_reconquete
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Exposition_de_lEntrainement_Militaire
+		}
+		x = 37
+		y = 12
+		
+					completion_reward = {
+						add_stability = 0.05
+						add_war_support = 0.15
+		}
+
+	}
+	focus = {
+		id = Combattre_en_algérie
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Planifier_la_reconquete
+		}
+		mutually_exclusive = {
+			focus = Attaquer_de_Front
+		}
+		x = 36
+		y = 13
+
+	}
+	focus = {
+		id = Attaquer_de_Front
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Planifier_la_reconquete
+		}
+		mutually_exclusive = {
+			focus = Combattre_en_algérie
+		}
+		x = 38
+		y = 13
+
+		completion_reward = {
+				add_ideas = Attaque_de_front
+		}
+	}
+	focus = {
+		id = Envahir_la_france_continentale
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Attaquer_de_Front
+			focus = Combattre_en_algérie
+		}
+		x = 37
+		y = 14
+		
+			completion_reward = {
+				declare_war_on = {
+    target = TFE
+    type = annex_everything
+}
+		}
+
+	}
+}

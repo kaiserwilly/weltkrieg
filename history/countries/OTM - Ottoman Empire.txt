@@ -17,6 +17,8 @@ set_technology = {
 	CAS1 = 1
 }
 
+puppet = CRI
+
 set_politics = {
 	ruling_party = monarchism
 	last_election = "1935.2.8"

@@ -1,0 +1,667 @@
+focus_tree = {
+	id = French_empire
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TFE
+		}
+	}
+	default = no
+	focus = {
+		id = Industrie_mil_precoce
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 3
+		y = 0
+
+	}
+	focus = {
+		id = Victoire
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 15
+		y = 0
+
+	}
+	focus = {
+		id = Chantier_navaux_de_bretagne
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Industrie_mil_precoce
+		}
+		x = 1
+		y = 1
+
+	}
+	focus = {
+		id = newfocus_6
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Chantier_navaux_de_bretagne
+		}
+		x = 0
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_8
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = newfocus_6
+		}
+		x = 0
+		y = 3
+
+	}
+	focus = {
+		id = newfocus_3
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Industrie_mil_precoce
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_4
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = newfocus_3
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = Developemer_L'armement_de_normandie
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Industrie_mil_precoce
+		}
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = newfocus_5
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Developemer_L'armement_de_normandie
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_9
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = newfocus_5
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = Reconstruire_le_pays
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = newfocus_8
+			focus = newfocus_9
+		}
+		prerequisite = {
+			focus = newfocus_4
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = Subvention_sur_la_recherche
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Reconstruire_le_pays
+		}
+		mutually_exclusive = {
+			focus = Subvention_dans_l'industrie
+		}
+		x = 2
+		y = 6
+
+	}
+	focus = {
+		id = Subvention_dans_l'industrie
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Reconstruire_le_pays
+		}
+		mutually_exclusive = {
+			focus = Subvention_sur_la_recherche
+		}
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = Burreau_des_affaire_interne
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Victoire
+		}
+		x = 11
+		y = 1
+
+	}
+	focus = {
+		id = Focus_sur_l'agroamilimentaire
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Burreau_des_affaire_interne
+		}
+		mutually_exclusive = {
+			focus = Focus_sur_l'industrie
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = Devellopement_des_champs
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Focus_sur_l'agroamilimentaire
+		}
+		x = 9
+		y = 3
+
+	}
+	focus = {
+		id = Devellopement_de_l'industrie_legere
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Devellopement_des_champs
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = Ruralisation
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Devellopement_de_l'industrie_legere
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = Focus_sur_l'industrie
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Burreau_des_affaire_interne
+		}
+		mutually_exclusive = {
+			focus = Focus_sur_l'agroamilimentaire
+		}
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = Develloepemnt_de_L'armement
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Focus_sur_l'industrie
+		}
+		x = 13
+		y = 3
+
+	}
+	focus = {
+		id = Investissement_massif_dans_l'industrie
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Develloepemnt_de_L'armement
+		}
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = Urbanisation
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Investissement_massif_dans_l'industrie
+		}
+		x = 13
+		y = 5
+
+	}
+	focus = {
+		id = Retablissement_de_l'economie
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Urbanisation
+		}
+		prerequisite = {
+			focus = Ruralisation
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
+		id = Gerer_les_affaire_exterieur
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Victoire
+		}
+		x = 23
+		y = 1
+
+	}
+	focus = {
+		id = Ouvrir_une_embassade_en_GER
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Gerer_les_affaire_exterieur
+		}
+		x = 17
+		y = 3
+
+	}
+	focus = {
+		id = La_Suisse_allemande_contre_les_Vauges
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Ouvrir_une_embassade_en_GER
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = Pacte_Avec_le_Diable_contre_la_lorraine
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = La_Suisse_allemande_contre_les_Vauges
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = Venger_la_guerre_de_7ans
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Pacte_Avec_le_Diable_contre_la_lorraine
+		}
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = Offrir_la_paix
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Venger_la_guerre_de_7ans
+		}
+		x = 17
+		y = 8
+
+	}
+	focus = {
+		id = Invasion_des_USA
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Offrir_la_paix
+		}
+		x = 17
+		y = 9
+
+	}
+	focus = {
+		id = Partition_Du_Monde_en_3
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Invasion_des_USA
+		}
+		mutually_exclusive = {
+			focus = Un_Monde_que_Pour_les_Francais
+			focus = Partition_du_Monde_en_Deux
+		}
+		x = 16
+		y = 10
+
+	}
+	focus = {
+		id = Partition_du_Monde_en_Deux
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Invasion_des_USA
+		}
+		mutually_exclusive = {
+			focus = Un_Monde_que_Pour_les_Francais
+			focus = Partition_Du_Monde_en_3
+		}
+		x = 18
+		y = 10
+
+	}
+	focus = {
+		id = Les_frontiere_naturel_de_la_FRA
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Gerer_les_affaire_exterieur
+		}
+		x = 22
+		y = 3
+
+	}
+	focus = {
+		id = Violer_la_neutralite_suisse
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Les_frontiere_naturel_de_la_FRA
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = La_question_BeNeLux
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Violer_la_neutralite_suisse
+		}
+		x = 22
+		y = 5
+
+	}
+	focus = {
+		id = Renier_la_conference_de_1830
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = La_question_BeNeLux
+		}
+		mutually_exclusive = {
+			focus = Faire_Pressions
+		}
+		x = 21
+		y = 6
+
+	}
+	focus = {
+		id = Restauration_de_la_republique_Batave
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Renier_la_conference_de_1830
+		}
+		x = 21
+		y = 7
+
+	}
+	focus = {
+		id = Faire_Pressions
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = La_question_BeNeLux
+		}
+		mutually_exclusive = {
+			focus = Renier_la_conference_de_1830
+		}
+		x = 23
+		y = 6
+
+	}
+	focus = {
+		id = Coup_D'Etat
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Faire_Pressions
+		}
+		x = 23
+		y = 7
+
+	}
+	focus = {
+		id = Reunification_des_Frontiére_naturel
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Coup_D'Etat
+			focus = Restauration_de_la_republique_Batave
+		}
+		x = 22
+		y = 8
+
+	}
+	focus = {
+		id = Ouvrir_une_embassae_en_ITA
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Gerer_les_affaire_exterieur
+		}
+		x = 26
+		y = 3
+
+	}
+	focus = {
+		id = Le_Pacte_Medideraneen
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Ouvrir_une_embassae_en_ITA
+		}
+		x = 26
+		y = 4
+
+	}
+	focus = {
+		id = Suisse_italiene_contre_la_savoie
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Le_Pacte_Medideraneen
+		}
+		mutually_exclusive = {
+			focus = Tunisie_contre_la_savoie
+		}
+		x = 25
+		y = 5
+
+	}
+	focus = {
+		id = Tunisie_contre_la_savoie
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Le_Pacte_Medideraneen
+		}
+		mutually_exclusive = {
+			focus = Suisse_italiene_contre_la_savoie
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = La_menace_africaine
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Gerer_les_affaire_exterieur
+		}
+		x = 29
+		y = 3
+
+	}
+	focus = {
+		id = Preparer_une_flotte_d'invasion
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = La_menace_africaine
+		}
+		x = 30
+		y = 4
+
+	}
+	focus = {
+		id = Subvention2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Dev_industriel
+		}
+		x = 3
+		y = 8
+
+	}
+	focus = {
+		id = Dev_industriel
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Subvention_sur_la_recherche
+			focus = Subvention_dans_l'industrie
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = Le_3eme_Empire
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Reunification_des_Frontiére_naturel
+		}
+		x = 22
+		y = 9
+
+	}
+	focus = {
+		id = Un_Monde_que_Pour_les_Francais
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Le_3eme_Empire
+			focus = Invasion_des_USA
+		}
+		mutually_exclusive = {
+			focus = Partition_du_Monde_en_Deux
+			focus = Partition_Du_Monde_en_3
+		}
+		x = 20
+		y = 10
+
+	}
+	focus = {
+		id = L'ultime_Guerre
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Un_Monde_que_Pour_les_Francais
+		}
+		x = 20
+		y = 11
+
+	}
+	focus = {
+		id = Invasion_du_monde_en_duo
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Partition_du_Monde_en_Deux
+		}
+		x = 18
+		y = 11
+
+	}
+	focus = {
+		id = Invasion_en_trio
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Partition_Du_Monde_en_3
+		}
+		x = 16
+		y = 11
+
+	}
+	focus = {
+		id = Mobiliser_les_Zouaves
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Preparer_une_flotte_d'invasion
+		}
+		x = 31
+		y = 5
+
+	}
+	focus = {
+		id = Preparer_l'invation_subsaharahiene
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Mobiliser_les_Zouaves
+		}
+		x = 31
+		y = 6
+
+	}
+	focus = {
+		id = Exterminer_les_Ressilant
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = Preparer_l'invation_subsaharahiene
+		}
+		x = 31
+		y = 7
+
+	}
+}

@@ -231,3 +231,393 @@ country_event = {
 	
 	}
 }
+
+#The Exiled French republis ask the US for being recognize 
+
+country_event = {
+	id = France.6
+	title = France.6.t
+	desc = spain.6.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France
+		
+		
+				add_political_power = -50
+		TFR = {
+			set_country_flag = RecobyUS
+			country_event = { id = France.9 days = 0 }
+			
+			
+			}
+
+
+		
+		}
+	option = {
+		name = fra.1.b #We do not recognize this country to be France
+		
+		
+				add_political_power = 50
+		TFR = {
+			country_event = { id = France.10 days = 0 }
+			
+			
+			}
+
+
+		
+		}
+	
+	}
+	
+#The Exiled French republis ask the UK for being recognize 
+
+country_event = {
+	id = France.7
+	title = France.7.t
+	desc = spain.7.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France
+		
+		
+				add_political_power = -50
+		TFR = {
+			set_country_flag = RecobyUK
+			country_event = { id = France.11 days = 0 }
+			
+			
+			}
+
+
+		
+		}
+	option = {
+		name = fra.1.b #We do not recognize this country to be France
+		
+		
+				add_political_power = 50
+		TFR = {
+			country_event = { id = France.12 days = 0 }
+			
+			
+			}
+
+
+		
+		}
+	
+	}
+#The Exiled French republis ask the GER for being recognize 
+
+country_event = {
+	id = France.8
+	title = France.8.t
+	desc = spain.8.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France
+		
+			add_stability = -0.05
+				add_political_power = -50
+		TFR = {
+			set_country_flag = RecobyGER
+			country_event = { id = France.13 days = 0 }
+			
+			
+			}
+
+
+		
+		}
+	option = {
+		name = fra.1.b #We do not recognize this country to be France
+		
+				add_stability = 0.05
+				add_political_power = 50
+		TFR = {
+			country_event = { id = France.14 days = 0 }
+			
+			
+			}
+
+
+		
+		}
+	
+	}
+country_event = {
+	id = France.9
+	title = France.9.t
+	desc = spain.9.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France
+		
+				add_stability = 0.05
+				add_political_power = 50
+				remove_ideas = Not_recognize_gouvernement3
+
+		
+		}
+	
+	}
+	
+country_event = {
+	id = France.10
+	title = France.10.t
+	desc = spain.10.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France
+		
+				add_stability = -0.05
+				add_political_power = -50
+
+		
+		}
+	
+	}
+country_event = {
+	id = France.11
+	title = France.11.t
+	desc = spain.11.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France
+		
+				add_stability = 0.05
+				add_political_power = 50
+				remove_ideas = Not_recognize_gouvernement3
+
+		
+		}
+	
+	}
+country_event = {
+	id = France.12
+	title = France.12.t
+	desc = spain.12.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France
+		
+				add_stability = -0.05
+				add_political_power = -50
+
+
+		
+		}
+	
+	}
+country_event = {
+	id = France.13
+	title = France.13.t
+	desc = spain.13.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France		
+			add_stability = 0.1
+			add_political_power = 50
+			remove_ideas = Not_recognize_gouvernement3
+		}
+	
+	}
+country_event = {
+	id = France.14
+	title = France.14.t
+	desc = spain.14.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We recognize this country to be France
+
+				add_political_power = -50
+
+		
+		}
+	
+	}
+	#Uk asked to give his colony
+	country_event = {
+	id = France.15
+	title = France.15.t
+	desc = spain.15.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We give them
+					TFR = {
+			
+			
+			TFR = {	transfer_state =  701 }
+			TFR = {	transfer_state =  700 }
+			TFR = {	transfer_state =  274 }
+			TFR = {	transfer_state =  558 }
+			
+			
+			}
+				
+
+		
+		}
+	option = {
+		name = fra.1.a #We don't give them
+					TFR = {
+					
+						country_event = { id = France.16 days = 0 }
+			
+			}
+				
+
+		
+		}
+	
+	}
+	
+	#Uk no
+	country_event = {
+	id = France.16
+	title = France.16.t
+	desc = spain.16.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a 
+
+				
+
+		
+		}
+
+	
+	}
+	#GER asked to give his colony
+	country_event = {
+	id = France.17
+	title = France.17.t
+	desc = spain.17.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a #We give them
+					TFR = {
+			
+			
+			TFR = {	transfer_state =  777 }
+			TFR = {	transfer_state =  776 }
+			TFR = {	transfer_state =  773 }
+			TFR = {	transfer_state =  774 }
+			TFR = {	transfer_state =  660 }
+			TFR = {	transfer_state =  813 }
+			
+			
+			}
+				
+
+		
+		}
+	option = {
+		name = fra.1.a #We don't give them
+					TFR = {
+					
+						country_event = { id = France.18 days = 0 }
+			
+			}
+				
+
+		
+		}
+	
+	}
+	#Ger no
+	country_event = {
+	id = France.18
+	title = France.18.t
+	desc = spain.18.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	option = {
+		name = fra.1.a 
+
+				
+
+		
+		}
+
+	
+	}
